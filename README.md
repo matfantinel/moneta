@@ -6,7 +6,9 @@
 
 Moneta is a handy applet that stays on your desktop and updates the exchange rate of currencies of your choice. It is a fork from the app [Coin](https://github.com/lainsce/coin/) from @lainsce, just adapted to handle real-world currencies instead of virtual ones.
 
-Most of the code is copied/based on his and so is the icon. So if you like this, sponsor him on GitHub!
+Most of the code, design and icon is copied/based on his. So if you like this, consider sponsoring him on GitHub!
+
+**Moneta is currently under development and is not yet suitable for daily use. If you want to help out, check out the Issues on this repo and open your Pull Request!**
 
 ## Built for elementary OS
 
