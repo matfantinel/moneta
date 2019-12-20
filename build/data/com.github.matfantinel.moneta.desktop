@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Moneta
+GenericName=Currency Rates
+Comment=Follow currency rates easily from your desktop.
+Categories=Utility;
+Exec=com.github.matfantinel.moneta %U
+Icon=com.github.matfantinel.moneta
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=moneta
+X-GNOME-UsesNotifications=true
+Keywords=Moneta;Money;Finances;Currency;

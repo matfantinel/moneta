@@ -1,0 +1,33 @@
+@define-color colorPrimary #EAF5D8;
+@define-color colorAccent @LIME_900;
+@define-color borderPrimary @LIME_900;
+@define-color textColorPrimary @LIME_900;
+
+.titlebar,
+.background {
+    background-color: @colorPrimary;
+    border: none;
+    color: @textColorPrimary;
+}
+
+.moneta-toolbar {
+    background: @colorPrimary;
+    color: @textColorPrimary;
+}
+
+combobox > box > button {
+    background: @colorPrimary;
+    color: @textColorPrimary;
+}
+
+cellview {
+    color: @textColorPrimary;
+}
+
+.negative-icon {
+    color: @STRAWBERRY_500;
+}
+
+.positive-icon {
+    color: @LIME_500;
+}
