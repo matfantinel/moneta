@@ -32,7 +32,7 @@ ninja com.github.matfantinel.moneta-update-po
 
 ## Developing and building
 
-If you want to go ahead and compile Reminduck yourself, you'll need the following dependencies:
+If you want to go ahead and compile Moneta yourself, you'll need the following dependencies:
 
 * libgranite-dev
 * libgtk-3-dev
@@ -63,4 +63,4 @@ com.github.matfantinel.moneta
 ```
 
 [elementary OS]: https://elementary.io
-[AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.reminduck
+[AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.moneta
