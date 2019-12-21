@@ -1,2 +1,2 @@
-src/Application.vala
+src/Objects/Currencies.vala
 src/MainWindow.vala
