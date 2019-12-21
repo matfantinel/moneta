@@ -20,17 +20,12 @@
 */
 
 namespace Moneta {
-    public class Application : Granite.Application {
+    public class Application : Gtk.Application {
         public MainWindow app_window;
 
         public Application() {
             Object(flags: ApplicationFlags.FLAGS_NONE,
             application_id: "com.github.matfantinel.moneta");
-        }
-
-        construct {
-            exec_name = "com.github.matfantinel.moneta";
-            app_launcher = "com.github.matfantinel.moneta";
         }
 
         protected override void activate() {
