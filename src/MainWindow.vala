@@ -246,6 +246,20 @@ namespace Moneta {
 
                 parser.load_from_data((string) message.response_body.flatten().data, -1);
                 var root_object = parser.get_root().get_object();
+                if (root_object == null) {
+                    avg = -1;
+                    avg_history = 0;
+                    return false;
+                }
+
+                var status = root_object.get_boolean_member("status");
+
+                if (!status) {
+                    avg = 0;
+                    avg_history = 0;
+                    return false;
+                }
+
                 var response_array = root_object.get_array_member("response");
                 var response_object = response_array.get_object_element(0);
                 
@@ -260,6 +274,7 @@ namespace Moneta {
                 }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
+                avg = -1;
             }
 
             return true;
@@ -275,7 +290,13 @@ namespace Moneta {
             settings.target = target_currency.get_active();
             target_curr_symbol = ((Currency)settings.target).get_symbol();            
 
-            label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
+            if (avg > 0) {
+                label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
+            } else if (avg == 0){
+                label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
+            } else {
+                label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
+            }
 
             label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
 
