@@ -251,11 +251,11 @@ namespace Moneta {
             settings.source = source_currency.get_active();
             curr_symbol = ((Currency)settings.source).get_symbol();
 
-            var vcurr_symbol = "";
+            var target_curr_symbol = "";
             settings.target = target_currency.get_active();
-            vcurr_symbol = ((Currency)settings.target).get_symbol();            
+            target_curr_symbol = ((Currency)settings.target).get_symbol();            
 
-            label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, vcurr_symbol));
+            label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
         }
     }
 }
