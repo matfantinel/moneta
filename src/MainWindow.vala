@@ -218,9 +218,9 @@ namespace Moneta {
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
             
-            var uri = "https://www.freeforexapi.com/api/live?pairs=" + target_iso + source_iso;
+            var uri = "https://fcsapi.com/api/forex/latest?symbol=" + target_iso + "/" + source_iso + "&access_key=R32PaI8NK9B6uHGvP6FvfiJXlwcAMRHu7KpMAK46vrmzhBxXQ";
             
-            stdout.printf("\n🎉️ "+ uri);
+            stdout.printf("\n🌐️ URI: "+ uri);
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
             session.send_message(message);
@@ -228,13 +228,16 @@ namespace Moneta {
             try {
                 var parser = new Json.Parser();
 
-                stdout.printf("\n🎉️ "+ (string)message.response_body.flatten().data);
+                stdout.printf("\n🌳️ Result: "+ (string)message.response_body.flatten().data);
 
                 parser.load_from_data((string) message.response_body.flatten().data, -1);
                 var root_object = parser.get_root().get_object();
-                var rates_object = root_object.get_object_member("rates");
-                var response_object = rates_object.get_object_member(target_iso + source_iso);
-                avg = response_object.get_double_member("rate");
+                var response_array = root_object.get_array_member("response");
+                var response_object = response_array.get_object_element(0);
+                var price = response_object.get_string_member("price");
+                if (price != null && price.length > 0) {
+                    avg = price.to_double();
+                }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
             }
