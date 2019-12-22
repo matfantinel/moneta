@@ -26,12 +26,14 @@ namespace Moneta {
     public class MainWindow : Gtk.ApplicationWindow {
         public Gtk.Label label_result;
         public Gtk.Label label_info;
+        public Gtk.Label label_history;
         public Gtk.ComboBox source_currency;
         public Gtk.ComboBox target_currency;
         public Gtk.Stack stack;
         public Gtk.Image aicon;
 
         public double avg;
+        public double avg_history;
         public string source_iso;
         public string target_iso;
 
@@ -79,9 +81,20 @@ namespace Moneta {
             label_info.set_halign(Gtk.Align.END);
             label_info.hexpand = true;
             label_result.set_halign(Gtk.Align.START);
+            label_history = new Gtk.Label ("");
+
+            aicon = new Gtk.Image ();
+            aicon.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
 
             get_values();
             set_labels();
+
+            var avg_grid = new Gtk.Grid ();
+            avg_grid.margin_top = 0;
+            avg_grid.margin_start = 6;
+            avg_grid.column_spacing = 6;
+            avg_grid.attach (aicon, 0, 0, 1, 1);
+            avg_grid.attach (label_history, 1, 0, 1, 1);
 
             var grid = new Gtk.Grid();
             grid.margin_top = 0;
@@ -92,6 +105,7 @@ namespace Moneta {
             grid.attach(source_currency, 0, 1, 2, 1);
             grid.attach(target_currency, 2, 1, 2, 1);
             grid.attach(label_result, 1, 2, 3, 2);
+            grid.attach (avg_grid, 0, 4, 1, 1);
             grid.attach(label_info, 1, 4, 3, 2);
 
             stack = new Gtk.Stack();
@@ -234,9 +248,15 @@ namespace Moneta {
                 var root_object = parser.get_root().get_object();
                 var response_array = root_object.get_array_member("response");
                 var response_object = response_array.get_object_element(0);
+                
                 var price = response_object.get_string_member("price");
                 if (price != null && price.length > 0) {
                     avg = price.to_double();
+                }
+
+                var chg_per = response_object.get_string_member("chg_per");
+                if (chg_per != null && chg_per.length > 0) {                    
+                    avg_history = chg_per.to_double();
                 }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
@@ -256,6 +276,24 @@ namespace Moneta {
             target_curr_symbol = ((Currency)settings.target).get_symbol();            
 
             label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
+
+            label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
+
+            set_history_styles();
+        }
+
+        public void set_history_styles() {
+            if (avg_history <= 0.0) {
+                aicon.icon_name = "go-down-symbolic";
+                var context = aicon.get_style_context ();
+                context.add_class ("negative-icon");
+                context.remove_class ("positive-icon");
+            } else {
+                aicon.icon_name = "go-up-symbolic";
+                var context = aicon.get_style_context ();
+                context.remove_class ("negative-icon");
+                context.add_class ("positive-icon");
+            }
         }
     }
 }
