@@ -77,7 +77,7 @@ namespace Moneta {
             label_result = new Gtk.Label("");
             label_result.set_halign(Gtk.Align.END);
             label_result.hexpand = true;
-            label_info = new Gtk.Label(_("Updated every hour"));
+            label_info = new Gtk.Label(_("Updated every 10 minutes"));
             label_info.set_halign(Gtk.Align.END);
             label_info.hexpand = true;
             label_result.set_halign(Gtk.Align.START);
@@ -128,7 +128,7 @@ namespace Moneta {
                 set_labels();
             });
 
-            Timeout.add_seconds(1800,() => {
+            Timeout.add_seconds(600,() => {
                 get_values();
                 set_labels();
             });
