@@ -22,9 +22,9 @@ executable(
     sources,
     asresources,
     dependencies: [
-        dependency('gtk+-3.0'),
-        dependency('sqlite3'),
         dependency('granite'),
+        dependency('gobject-2.0'),
+        dependency('gtk+-3.0'),
         dependency('libsoup-2.4'),
         dependency('json-glib-1.0')
     ],
