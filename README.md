@@ -8,13 +8,11 @@ Moneta is a handy applet that stays on your desktop and updates the exchange rat
 
 Most of the code, design and icon is copied/based on his. So if you like this, consider sponsoring him on GitHub!
 
-**Moneta is currently under development and is not yet suitable for daily use. If you want to help out, check out the Issues on this repo and open your Pull Request!**
-
 ## Built for elementary OS
 
 While Moneta can run in any Linux distribution, it was built with [elementary OS] in mind. I appreciate any help packaging it for more distributions, though!
 
-<!-- [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][AppCenter] -->
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][AppCenter]
 
 ## Translating
 

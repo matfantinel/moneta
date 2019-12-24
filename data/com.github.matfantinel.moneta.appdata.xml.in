@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 Matheus Fantinel <matfantinel@gmail.com> -->
+<!-- Copyright 2019 Matheus Fantinel <matfantinel@gmail.com> -->
 <component type="desktop">
   <id>com.github.matfantinel.moneta</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Moneta</name>
-  <summary>Follow currency rates easily from your desktop.</summary>
+  <summary>Monitor the exchange rates of real-world currencies on your desktop.</summary>
   <description>
-    <p>To-Do</p>
+    <p>
+      Moneta is a handy applet that stays on your desktop and updates the exchange rate of currencies of your choice. 
+      It is a fork from the app Coin by Lains, already on AppCenter, but adapted to handle real-world currencies instead of virtual ones.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Stays on top of your desktop, giving you a quick glimpse of the exchange rates during the day</li>
+      <li>Supports many different currencies and updates the rates many times throughout the day</li>
+      <li>Indicates whether the rate has increased or decreased compared to previous day</li>
+    </ul>
   </description>
   <releases>  
-    <release version="1.0.0" date="2019-10-09">
+    <release version="1.0.0" date="2019-12-24">
       <description>
         <p>Initial Release 💰️</p>
       </description>
@@ -26,21 +35,15 @@
   <update_contact>matfantinel@gmail.com</update_contact>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/Welcome.png</image>
+      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/Main.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/Editor.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/Editor-dark.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/List.png</image>
+      <image>https://raw.githubusercontent.com/matfantinel/moneta/master/data/screenshots/Main2.png</image>
     </screenshot>
   </screenshots>
   <custom>
-     <value key="x-appcenter-color-primary">#3D3D3D</value>
-     <value key="x-appcenter-color-primary-text">#FFF394</value>
+     <value key="x-appcenter-color-primary">#EAF5D8</value>
+     <value key="x-appcenter-color-primary-text">#206b00</value>
      <value key="x-appcenter-suggested-price">0</value>
   </custom>
 </component>
