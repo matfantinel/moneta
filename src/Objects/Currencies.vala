@@ -24,7 +24,15 @@ namespace Moneta {
         US_DOLLAR,
         BRAZILIAN_REAL,
         EURO,
-        POUND_STERLING;
+        POUND_STERLING,
+        AUSTRALIAN_DOLLAR,
+        CANADIAN_DOLLAR,
+        CHINESE_YUAN,
+        INDIAN_RUPEE,
+        JAPANESE_YEN,
+        RUSSIAN_RUBLE,
+        SWISS_FRANC,
+        ARGENTINIAN_PESO;
 
         public string get_friendly_name() {
             switch (this) {   
@@ -39,6 +47,30 @@ namespace Moneta {
 
                 case POUND_STERLING:
                     return _("British Pound");
+
+                case AUSTRALIAN_DOLLAR:
+                    return _("Australian Dollar");
+
+                case CANADIAN_DOLLAR:
+                    return _("Canadian Dollar");
+
+                case CHINESE_YUAN:
+                    return _("Chinese Yuan");
+
+                case INDIAN_RUPEE:
+                    return _("Indian Rupee");
+
+                case JAPANESE_YEN:
+                    return _("Japanese Yen");
+
+                case RUSSIAN_RUBLE:
+                    return _("Russian Ruble");
+
+                case SWISS_FRANC:
+                    return _("Swiss Franc");
+
+                case ARGENTINIAN_PESO:
+                    return _("Argentinian Peso");
     
                 default:
                     assert_not_reached();
@@ -58,6 +90,30 @@ namespace Moneta {
 
                 case POUND_STERLING:
                     return "GBP";
+
+                case AUSTRALIAN_DOLLAR:
+                    return "AUD";
+
+                case CANADIAN_DOLLAR:
+                    return "CAD";
+
+                case CHINESE_YUAN:
+                    return "CNY";
+
+                case INDIAN_RUPEE:
+                    return "INR";
+
+                case JAPANESE_YEN:
+                    return "JPY";
+
+                case RUSSIAN_RUBLE:
+                    return "RUB";
+
+                case SWISS_FRANC:
+                    return "CHF";
+
+                case ARGENTINIAN_PESO:
+                    return "ARS";
     
                 default:
                     assert_not_reached();
@@ -77,6 +133,30 @@ namespace Moneta {
 
                 case POUND_STERLING:
                     return "£";
+
+                case AUSTRALIAN_DOLLAR:
+                    return "A$";
+
+                case CANADIAN_DOLLAR:
+                    return "CA$";
+
+                case CHINESE_YUAN:
+                    return "¥";
+
+                case INDIAN_RUPEE:
+                    return "₹";
+
+                case JAPANESE_YEN:
+                    return "¥";
+
+                case RUSSIAN_RUBLE:
+                    return "₽";
+
+                case SWISS_FRANC:
+                    return "CHF";
+
+                case ARGENTINIAN_PESO:
+                    return "$";
     
                 default:
                     assert_not_reached();
