@@ -153,6 +153,17 @@ namespace Moneta {
             });
         }
 
+        public override bool delete_event (Gdk.EventAny event) {
+            int x, y;
+            get_position (out x, out y);
+
+            var settings = AppSettings.get_default ();
+            settings.window_x = x;
+            settings.window_y = y;
+
+            return false;
+        }
+
         public void setup_window_styles() {
             var provider = new Gtk.CssProvider();
             provider.load_from_resource("/com/github/matfantinel/moneta/stylesheet.css");
