@@ -1,18 +1,31 @@
+# Moneta
+<p align="center">
+    <a href="https://appcenter.elementary.io/com.github.matfantinel.moneta" target="_blank">
+        <img src="https://appcenter.elementary.io/badge.svg">
+    </a>
+    <a href='https://flathub.org/apps/details/com.github.matfantinel.moneta' target="_blank"><img width='150' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/matfantinel/moneta/blob/master/COPYING">
+    <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
+  </a>
+  <a href="https://travis-ci.org/calo001/fondo">
+    <img src="https://travis-ci.org/matfantinel/moneta.svg?branch=master">
+  </a>
+</p>
+
 <p align="center">
     <img src="data/screenshots/Main.png" alt="Screenshot" />
 </p>
 
-# Moneta
-
-Moneta is a handy applet that stays on your desktop and updates the exchange rate of currencies of your choice. It is a fork from the app [Coin](https://github.com/lainsce/coin/) from @lainsce, just adapted to handle real-world currencies instead of virtual ones.
+Moneta is a handy applet that stays on your desktop and updates the exchange rate of currencies of your choice. It is a fork from the app [Coin](https://github.com/lainsce/coin/) by @lainsce, just adapted to handle real-world currencies instead of virtual ones.
 
 Most of the code, design and icon is copied/based on his. So if you like this, consider sponsoring him on GitHub!
 
 ## Built for elementary OS
 
-While Moneta can run in any Linux distribution, it was built with [elementary OS] in mind. I appreciate any help packaging it for more distributions, though!
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][AppCenter]
+While Moneta can run in any Linux distribution, it was built with [elementary OS] in mind. It runs perfectly on other distributions like Ubuntu, Fedora, etc. though. Download it on Flathub if you want to use Reminduck everywhere!
 
 ## Translating
 
@@ -45,6 +58,12 @@ You can install them on elementary OS Juno with:
 sudo apt install elementary-sdk
 ```
 
+And on other Ubuntu-based distributions with:
+
+```shell
+sudo apt install libgranite-dev libgtk-3-dev meson valac libsoup2.4-dev libjson-glib-dev
+```
+
 Run `meson build` to configure the build environment and run `ninja install`
 to install:
 
@@ -60,5 +79,26 @@ Then run it with:
 com.github.matfantinel.moneta
 ```
 
+## Flatpak
+
+Moneta is also available as a Flatpak. To build/install it locally, first you have to install the necessary runtimes:
+
+```shell
+sudo apt install flatpak-builder
+flatpak install flathub org.freedesktop.Sdk/x86_64/19.08
+flatpak install flathub org.freedesktop.Platform/x86_64/19.08
+flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
+```
+
+Then, from the project root:
+
+```shell
+flatpak-builder --install repo com.github.matfantinel.moneta.json --force-clean --user
+```
+
+The app should be displayed on your apps list, or you can run it with:
+```shell
+com.github.matfantinel.moneta
+```
+
 [elementary OS]: https://elementary.io
-[AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.moneta
