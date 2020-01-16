@@ -128,7 +128,7 @@ namespace Moneta {
                 set_labels();
             });
 
-            Timeout.add_seconds(600,() => {
+            Timeout.add_seconds(60,() => {
                 get_values();
                 set_labels();
             });
@@ -253,7 +253,6 @@ namespace Moneta {
             
             var uri = "https://fcsapi.com/api/forex/latest?symbol=" + target_iso + "/" + source_iso + "&access_key=R32PaI8NK9B6uHGvP6FvfiJXlwcAMRHu7KpMAK46vrmzhBxXQ";
             
-            stdout.printf("\n🌐️ URI: "+ uri);
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
             session.send_message(message);
@@ -261,7 +260,7 @@ namespace Moneta {
             try {
                 var parser = new Json.Parser();
 
-                stdout.printf("\n🌳️ Result: "+ (string)message.response_body.flatten().data);
+                stdout.printf("🌳️ Result: "+ (string)message.response_body.flatten().data + "\n");
 
                 parser.load_from_data((string) message.response_body.flatten().data, -1);
                 var root_object = parser.get_root().get_object();
@@ -293,6 +292,7 @@ namespace Moneta {
                 }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
+                stdout.printf("🛑 Error fetching data: "+ e.message + "\n");
                 avg = -1;
             }
 
