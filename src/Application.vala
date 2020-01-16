@@ -29,8 +29,6 @@ namespace Moneta {
         }
 
         protected override void activate() {
-            Gtk.Settings.get_default().set_property("gtk-icon-theme-name", "elementary");
-            Gtk.Settings.get_default().set_property("gtk-theme-name", "elementary");
             if(get_windows().length() > 0) {
                 app_window.present();
                 return;
