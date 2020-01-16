@@ -128,7 +128,7 @@ namespace Moneta {
                 set_labels();
             });
 
-            Timeout.add_seconds(5,() => {
+            Timeout.add_seconds(600,() => {
                 get_values();
                 set_labels();
                 return true;

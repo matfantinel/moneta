@@ -32,7 +32,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/matfantinel/moneta.git",
-                "branch": "flatpak-fix"
+                "tag": "v1.0.5",
+                "commit": "47b489e7240c37bfe3ea3fd53aca4d01db961a4e"
             },
             {
               "type" : "patch",
