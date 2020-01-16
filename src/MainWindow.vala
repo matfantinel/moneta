@@ -131,6 +131,7 @@ namespace Moneta {
             Timeout.add_seconds(5,() => {
                 get_values();
                 set_labels();
+                return true;
             });
 
             int x = settings.window_x;
