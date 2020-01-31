@@ -16,6 +16,13 @@
     </ul>
   </description>
   <releases>  
+    <release version="1.1.1" date="2020-01-31">
+      <description>
+        <li>💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)</li>
+        <li>🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)</li>
+        <li>🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)</li>
+      </description>
+    </release>
     <release version="1.0.0" date="2019-12-24">
       <description>
         <p>Initial Release 💰️</p>
