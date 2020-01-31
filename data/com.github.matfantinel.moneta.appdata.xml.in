@@ -16,7 +16,7 @@
     </ul>
   </description>
   <releases>  
-    <release version="1.1.1" date="2020-01-31">
+    <release version="1.1.2" date="2020-01-31">
       <description>
         <li>💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)</li>
         <li>🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)</li>
