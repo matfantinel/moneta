@@ -1,7 +1,7 @@
 @define-color colorPrimary #EAF5D8;
-@define-color colorAccent @LIME_900;
-@define-color borderPrimary @LIME_900;
-@define-color textColorPrimary @LIME_900;
+@define-color colorAccent #206B00;
+@define-color borderPrimary #206B00;
+@define-color textColorPrimary #206B00;
 
 .titlebar,
 .background {
@@ -25,9 +25,9 @@ cellview {
 }
 
 .negative-icon {
-    color: @STRAWBERRY_500;
+    color: #c6262e;
 }
 
 .positive-icon {
-    color: @LIME_500;
+    color: #68b723;
 }
