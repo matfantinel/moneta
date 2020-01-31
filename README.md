@@ -35,8 +35,8 @@ You can help translating this app with the following steps:
 * Then, make sure the translation files are updated:
 ```shell
 cd build
-sudo ninja com.github.matfantinel.moneta-pot
-sudo ninja com.github.matfantinel.moneta-update-po
+ninja com.github.matfantinel.moneta-pot
+ninja com.github.matfantinel.moneta-update-po
 ```
 * Then, update your language file in `po` folder with your translations. For example, portuguese (pt) translation file is `po/pt.po`;
 * Some additional translation files can be found in `po/extra/` (stuff for the xml and .desktop files)
@@ -44,8 +44,8 @@ sudo ninja com.github.matfantinel.moneta-update-po
   
   ```shell
   # we're still in ./build
-  sudo ninja extra-pot
-  sudo ninja extra-update-po
+  ninja extra-pot
+  ninja extra-update-po
   ```
 * Fork this repo, commit to your repo and then open a Pull Request to this one.
 
