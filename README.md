@@ -25,7 +25,7 @@ Most of the code, design and icon is copied/based on his. So if you like this, c
 
 ## Built for elementary OS
 
-While Moneta can run in any Linux distribution, it was built with [elementary OS] in mind. It runs perfectly on other distributions like Ubuntu, Fedora, etc. though. Download it on Flathub if you want to use Reminduck everywhere!
+While Moneta can run in any Linux distribution, it was built with [elementary OS] in mind. It runs perfectly on other distributions like Ubuntu, Fedora, etc. though. Download it on Flathub if you want to use Moneta everywhere!
 
 ## Translating
 
