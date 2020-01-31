@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-22 00:03+0900\n"
+"POT-Creation-Date: 2020-01-31 12:14-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,6 @@ msgid "Currency Rates"
 msgstr ""
 
 #: data/com.github.matfantinel.moneta.desktop.in:5
-#: data/com.github.matfantinel.moneta.appdata.xml.in:8
 msgid "Follow currency rates easily from your desktop."
 msgstr ""
 
@@ -39,14 +38,56 @@ msgstr ""
 msgid "Moneta;Money;Finances;Currency;"
 msgstr ""
 
+#: data/com.github.matfantinel.moneta.appdata.xml.in:8
+msgid "Monitor the exchange rates of real-world currencies on your desktop"
+msgstr ""
+
 #: data/com.github.matfantinel.moneta.appdata.xml.in:10
-msgid "To-Do"
+msgid ""
+"Keep an eye on the exchange rate of currencies of your choice with this "
+"handy applet that stays on your desktop. Moneta is a fork from the app Coin "
+"by Lains, already on AppCenter, but adapted to handle real-world currencies "
+"instead of virtual ones."
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:11
+msgid "Features:"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:13
+msgid ""
+"Stays on top of your desktop, giving you a quick glimpse of the exchange "
+"rates during the day"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:14
+msgid ""
+"Supports many different currencies and updates the rates many times "
+"throughout the day"
 msgstr ""
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:15
-msgid "Initial Release 💰️"
+msgid ""
+"Indicates whether the rate has increased or decreased compared to previous "
+"day"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:21
+msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
 msgstr ""
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:22
+msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:23
+msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:28
+msgid "Initial Release 💰️"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:64
 msgid "Matheus Fantinel"
 msgstr ""

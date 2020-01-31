@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 13:55+0100\n"
+"POT-Creation-Date: 2020-01-31 12:14-0300\n"
 "PO-Revision-Date: 2020-01-31 13:44+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -17,53 +17,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Objects/Currencies.vala:40
+#: src/Objects/Currencies.vala:41
 msgid "US Dollar"
 msgstr "Dollar américain"
 
-#: src/Objects/Currencies.vala:43
+#: src/Objects/Currencies.vala:44
 msgid "Brazilian Real"
 msgstr "Réal brésilien"
 
-#: src/Objects/Currencies.vala:46
+#: src/Objects/Currencies.vala:47
 msgid "Euro"
 msgstr "Euro"
 
-#: src/Objects/Currencies.vala:49
+#: src/Objects/Currencies.vala:50
 msgid "British Pound"
 msgstr "Livre sterling"
 
-#: src/Objects/Currencies.vala:52
+#: src/Objects/Currencies.vala:53
 msgid "Australian Dollar"
 msgstr "Dollar australien"
 
-#: src/Objects/Currencies.vala:55
+#: src/Objects/Currencies.vala:56
 msgid "Canadian Dollar"
 msgstr "Dollar canadien"
 
-#: src/Objects/Currencies.vala:58
+#: src/Objects/Currencies.vala:59
 msgid "Chinese Yuan"
 msgstr "Yuan chinois"
 
-#: src/Objects/Currencies.vala:61
+#: src/Objects/Currencies.vala:62
 msgid "Indian Rupee"
 msgstr "Roupie indienne"
 
-#: src/Objects/Currencies.vala:64
+#: src/Objects/Currencies.vala:65
 msgid "Japanese Yen"
 msgstr "Yen japonais"
 
-#: src/Objects/Currencies.vala:67
+#: src/Objects/Currencies.vala:68
 msgid "Russian Ruble"
 msgstr "Rouble russe"
 
-#: src/Objects/Currencies.vala:70
+#: src/Objects/Currencies.vala:71
 msgid "Swiss Franc"
 msgstr "Franc suisse"
 
-#: src/Objects/Currencies.vala:73
+#: src/Objects/Currencies.vala:74
 msgid "Argentinian Peso"
 msgstr "Peso argentin"
+
+#: src/Objects/Currencies.vala:77
+msgid "Czech Koruna"
+msgstr "Couronne tchèque"
 
 #: src/MainWindow.vala:80
 msgid "Updated every 10 minutes"
