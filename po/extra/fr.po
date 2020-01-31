@@ -1,0 +1,92 @@
+# French translations for extra package.
+# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Nathan Bonnemains (@NathanBnm), 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-31 13:55+0100\n"
+"PO-Revision-Date: 2020-01-31 13:44+0100\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/com.github.matfantinel.moneta.desktop.in:3
+#: data/com.github.matfantinel.moneta.appdata.xml.in:7
+msgid "Moneta"
+msgstr "Moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:4
+msgid "Currency Rates"
+msgstr "Taux de change"
+
+#: data/com.github.matfantinel.moneta.desktop.in:5
+msgid "Follow currency rates easily from your desktop."
+msgstr ""
+"Suivez le taux de change des devises facilement depuis votre ordinateur."
+
+#: data/com.github.matfantinel.moneta.desktop.in:8
+msgid "com.github.matfantinel.moneta"
+msgstr "com.github.matfantinel.moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:12
+msgid "Moneta;Money;Finances;Currency;"
+msgstr "Moneta;Monnaie;Finances;Devise;"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:8
+msgid "Monitor the exchange rates of real-world currencies on your desktop"
+msgstr ""
+"Suivez les taux de change des devises à travers le monde depuis votre "
+"ordinateur"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:10
+msgid ""
+"Keep an eye on the exchange rate of currencies of your choice with this "
+"handy applet that stays on your desktop. Moneta is a fork from the app Coin "
+"by Lains, already on AppCenter, but adapted to handle real-world currencies "
+"instead of virtual ones."
+msgstr ""
+"Gardez un œil sur le taux de change des devises de votre choix avec cet "
+"outil pratique qui reste sur votre bureau. Moneta est un fork de "
+"l'application Coin par Lains, déjà présente dans le Centre d'Applications, "
+"mais adaptée pour gérer les devises réelles au lieu des cryptomonnaies."
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:11
+msgid "Features:"
+msgstr "Fonctionnalités :"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:13
+msgid ""
+"Stays on top of your desktop, giving you a quick glimpse of the exchange "
+"rates during the day"
+msgstr ""
+"Reste sur votre bureau, vous donnant un rapide aperçu du taux de change au "
+"cours de la journée"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:14
+msgid ""
+"Supports many different currencies and updates the rates many times "
+"throughout the day"
+msgstr ""
+"Prend en charge différentes devises et met à jour les taux régulièrement au "
+"cours de la journée"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:15
+msgid ""
+"Indicates whether the rate has increased or decreased compared to previous "
+"day"
+msgstr "Indique si le taux a augmenté ou diminué par rapport au jour précédent"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:21
+msgid "Initial Release 💰️"
+msgstr "Version initiale 💰️"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:57
+msgid "Matheus Fantinel"
+msgstr "Matheus Fantinel"
