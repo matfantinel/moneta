@@ -18,10 +18,12 @@
   <releases>  
     <release version="1.1.2" date="2020-01-31">
       <description>
-        <li>💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)</li>
-        <li>🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)</li>
-        <li>🇷🇺 Russian Translation (Andrey Sudarikov)</li>
-        <li>🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)</li>
+        <ul>
+          <li>💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)</li>
+          <li>🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)</li>
+          <li>🇷🇺 Russian Translation (Andrey Sudarikov)</li>
+          <li>🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)</li>
+        </ul>
       </description>
     </release>
     <release version="1.0.0" date="2019-12-24">
