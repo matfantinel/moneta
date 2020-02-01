@@ -1,7 +1,7 @@
-# French translations for extra package.
+# magzar (Hungarian) translations for extra package.
 # Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Nathan Bonnemains (@NathanBnm), 2020.
+# Óvári (@ovari), 2020.
 #
 msgid ""
 msgstr ""
@@ -9,9 +9,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 12:54-0300\n"
 "PO-Revision-Date: 2020-01-31 13:44+0100\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Last-Translator: Óvári (@ovari)\n"
 "Language-Team: none\n"
-"Language: fr\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,12 +24,12 @@ msgstr "Moneta"
 
 #: data/com.github.matfantinel.moneta.desktop.in:4
 msgid "Currency Rates"
-msgstr "Taux de change"
+msgstr "Pénznem árfolyamok"
 
 #: data/com.github.matfantinel.moneta.desktop.in:5
 msgid "Follow currency rates easily from your desktop."
 msgstr ""
-"Suivez le taux de change des devises facilement depuis votre ordinateur."
+"Kövesse egyszerűen az árfolyamokat a számítógép asztalán."
 
 #: data/com.github.matfantinel.moneta.desktop.in:8
 msgid "com.github.matfantinel.moneta"
@@ -37,13 +37,12 @@ msgstr "com.github.matfantinel.moneta"
 
 #: data/com.github.matfantinel.moneta.desktop.in:12
 msgid "Moneta;Money;Finances;Currency;"
-msgstr "Moneta;Monnaie;Finances;Devise;"
+msgstr "Moneta;Pénz;Pénzügy;Pénznem;"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:8
 msgid "Monitor the exchange rates of real-world currencies on your desktop"
 msgstr ""
-"Suivez les taux de change des devises à travers le monde depuis votre "
-"ordinateur"
+"Figyelemmel kíséri a valós valutaárfolyamokat az asztalon"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:10
 msgid ""
@@ -52,52 +51,51 @@ msgid ""
 "by Lains, already on AppCenter, but adapted to handle real-world currencies "
 "instead of virtual ones."
 msgstr ""
-"Gardez un œil sur le taux de change des devises de votre choix avec cet "
-"outil pratique qui reste sur votre bureau. Moneta est un fork de "
-"l'application Coin par Lains, déjà présente dans le Centre d'Applications, "
-"mais adaptée pour gérer les devises réelles au lieu des cryptomonnaies."
+"Figyelemmel kíséri a választott pénznemek átváltási árfolyamát ezzel a "
+"praktikus applettel, amely az asztalon marad. A Moneta egy villát jelent a "
+"Lains alkalmazás Coin alkalmazásából, amely már az AppCenter-en található, "
+"de a virtuális valuta helyett valós valuták kezelésére lett adaptálva."
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:11
 msgid "Features:"
-msgstr "Fonctionnalités :"
+msgstr "Jellemzők:"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:13
 msgid ""
 "Stays on top of your desktop, giving you a quick glimpse of the exchange "
 "rates during the day"
 msgstr ""
-"Reste sur votre bureau, vous donnant un rapide aperçu du taux de change au "
-"cours de la journée"
+"Az asztal tetején marad, így gyors pillantást vehet a napi árfolyamokra"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:14
 msgid ""
 "Supports many different currencies and updates the rates many times "
 "throughout the day"
 msgstr ""
-"Prend en charge différentes devises et met à jour les taux régulièrement au "
-"cours de la journée"
+"Támogat sok különböző valutát, és nap mint nap többször frissíti az "
+"árfolyamokat"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:15
 msgid ""
 "Indicates whether the rate has increased or decreased compared to previous "
 "day"
-msgstr "Indique si le taux a augmenté ou diminué par rapport au jour précédent"
+msgstr "Azt jelzi, hogy az arány növekedett vagy csökkent-e az előző naphoz képest"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:21
 msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
-msgstr ""
+msgstr "💰 Új pénznem: cseh koruna (Marcelo Fantinel | @marfantinel)"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:22
 msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr ""
+msgstr "🇫🇷 Francia fordítás (Nathan Bonnemains | @NathanBnm)"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:23
 msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
-msgstr ""
+msgstr "🎨 Javítsa meg a színeket az alapértelmezett témákban (Marcelo Fantinel | @marfantinel)"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:28
 msgid "Initial Release 💰️"
-msgstr "Version initiale 💰️"
+msgstr "Első kiadás 💰️"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:64
 msgid "Matheus Fantinel"
