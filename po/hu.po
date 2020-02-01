@@ -1,7 +1,7 @@
 # magyar (Hungarian) translations for com.github.matfantinel.moneta package.
 # Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.matfantinel.moneta package.
-# Nathan Bonnemains (@NathanBnm), 2020.
+# Óvári (@ovari), 2020.
 #
 msgid ""
 msgstr ""
