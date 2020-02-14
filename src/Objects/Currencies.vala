@@ -33,7 +33,8 @@ namespace Moneta {
         RUSSIAN_RUBLE,
         SWISS_FRANC,
         ARGENTINIAN_PESO,
-        CZECH_KORUNA;
+        CZECH_KORUNA,
+        MEXICAN_PESO;
 
         public string get_friendly_name() {
             switch (this) {   
@@ -75,7 +76,10 @@ namespace Moneta {
 
                 case CZECH_KORUNA:
                     return _("Czech Koruna");
-    
+
+                case MEXICAN_PESO:
+                    return _("Mexican Peso");
+
                 default:
                     assert_not_reached();
             }
@@ -121,6 +125,9 @@ namespace Moneta {
 
                 case CZECH_KORUNA:
                     return "CZK";
+
+                case MEXICAN_PESO:
+                    return "MXN";
     
                 default:
                     assert_not_reached();
@@ -167,6 +174,9 @@ namespace Moneta {
 
                 case CZECH_KORUNA:
                     return "Kč";
+
+                case MEXICAN_PESO:
+                    return "$";
     
                 default:
                     assert_not_reached();
