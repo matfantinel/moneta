@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-31 12:54-0300\n"
+"POT-Creation-Date: 2020-02-02 11:45-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -72,22 +72,26 @@ msgid ""
 "day"
 msgstr ""
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:21
+#: data/com.github.matfantinel.moneta.appdata.xml.in:22
 msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
 msgstr ""
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:22
+#: data/com.github.matfantinel.moneta.appdata.xml.in:23
 msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
 msgstr ""
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:23
+#: data/com.github.matfantinel.moneta.appdata.xml.in:24
+msgid "🇷🇺 Russian Translation (Andrey Sudarikov)"
+msgstr ""
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:25
 msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
 msgstr ""
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:28
+#: data/com.github.matfantinel.moneta.appdata.xml.in:31
 msgid "Initial Release 💰️"
 msgstr ""
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:64
+#: data/com.github.matfantinel.moneta.appdata.xml.in:67
 msgid "Matheus Fantinel"
 msgstr ""
