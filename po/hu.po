@@ -1,0 +1,74 @@
+# magyar (Hungarian) translations for com.github.matfantinel.moneta package.
+# Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.matfantinel.moneta package.
+# Óvári (@ovari), 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.matfantinel.moneta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-31 12:54-0300\n"
+"PO-Revision-Date: 2020-01-31 13:44+0100\n"
+"Last-Translator: Óvári (@ovari)\n"
+"Language-Team: none\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/Objects/Currencies.vala:41
+msgid "US Dollar"
+msgstr "amerikai dollár"
+
+#: src/Objects/Currencies.vala:44
+msgid "Brazilian Real"
+msgstr "brazíliai real"
+
+#: src/Objects/Currencies.vala:47
+msgid "Euro"
+msgstr "euró"
+
+#: src/Objects/Currencies.vala:50
+msgid "British Pound"
+msgstr "brit font"
+
+#: src/Objects/Currencies.vala:53
+msgid "Australian Dollar"
+msgstr "ausztrál dollár"
+
+#: src/Objects/Currencies.vala:56
+msgid "Canadian Dollar"
+msgstr "kanadai dollár"
+
+#: src/Objects/Currencies.vala:59
+msgid "Chinese Yuan"
+msgstr "kínai jüan"
+
+#: src/Objects/Currencies.vala:62
+msgid "Indian Rupee"
+msgstr "indiai rúpia"
+
+#: src/Objects/Currencies.vala:65
+msgid "Japanese Yen"
+msgstr "japán jen"
+
+#: src/Objects/Currencies.vala:68
+msgid "Russian Ruble"
+msgstr "orosz rubel"
+
+#: src/Objects/Currencies.vala:71
+msgid "Swiss Franc"
+msgstr "svájci frank"
+
+#: src/Objects/Currencies.vala:74
+msgid "Argentinian Peso"
+msgstr "argentin peso"
+
+#: src/Objects/Currencies.vala:77
+msgid "Czech Koruna"
+msgstr "cseh korona"
+
+#: src/MainWindow.vala:80
+msgid "Updated every 10 minutes"
+msgstr "10 percenként frissítve"
