@@ -1,4 +1,4 @@
-project('com.github.matfantinel.moneta', 'vala', 'c', version: '1.1.3')
+project('com.github.matfantinel.moneta', 'vala', 'c', version: '1.1.4')
 
 gnome = import('gnome')
 i18n = import('i18n')
