@@ -201,7 +201,8 @@ namespace Moneta {
                 Currency.SWISS_FRANC.get_friendly_name(),
                 Currency.ARGENTINIAN_PESO.get_friendly_name(),
                 Currency.CZECH_KORUNA.get_friendly_name(),
-                Currency.MEXICAN_PESO.get_friendly_name()
+                Currency.MEXICAN_PESO.get_friendly_name(),
+                Currency.HUNGARIAN_FORINT.get_friendly_name()
             };
             Gtk.ListStore source_list_store = new Gtk.ListStore(1, typeof(string));
 
