@@ -35,7 +35,8 @@ namespace Moneta {
         ARGENTINIAN_PESO,
         CZECH_KORUNA,
         MEXICAN_PESO,
-        HUNGARIAN_FORINT;
+        HUNGARIAN_FORINT,
+        KAZAKHSTANI_TENGE;
 
         public string get_friendly_name() {
             switch (this) {   
@@ -83,6 +84,9 @@ namespace Moneta {
 
                 case HUNGARIAN_FORINT:
                     return _("Hungarian Forint");
+
+                case KAZAKHSTANI_TENGE:
+                    return _("Kazakhstani Tenge");
 
                 default:
                     assert_not_reached();
@@ -135,6 +139,9 @@ namespace Moneta {
 
                 case HUNGARIAN_FORINT:
                     return "HUF";
+
+                case KAZAKHSTANI_TENGE:
+                    return "KZT";
     
                 default:
                     assert_not_reached();
@@ -187,6 +194,9 @@ namespace Moneta {
 
                 case HUNGARIAN_FORINT:
                     return "Ft";
+
+                case KAZAKHSTANI_TENGE:
+                    return "₸";
     
                 default:
                     assert_not_reached();
