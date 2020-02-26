@@ -203,7 +203,8 @@ namespace Moneta {
                 Currency.CZECH_KORUNA.get_friendly_name(),
                 Currency.MEXICAN_PESO.get_friendly_name(),
                 Currency.HUNGARIAN_FORINT.get_friendly_name(),
-                Currency.KAZAKHSTANI_TENGE.get_friendly_name()
+                Currency.KAZAKHSTANI_TENGE.get_friendly_name(),
+                Currency.TAIWAN_DOLLAR.get_friendly_name()
             };
             Gtk.ListStore source_list_store = new Gtk.ListStore(1, typeof(string));
 
