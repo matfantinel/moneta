@@ -1,86 +1,88 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Turkish translations for com.github.matfantinel.moneta package.
+# Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.matfantinel.moneta package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Nathan Bonnemains (@NathanBnm), 2020.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 11:18+0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2020-02-27 02:18+0600\n"
+"PO-Revision-Date: 2020-01-31 13:44+0100\n"
+"Last-Translator: Safak Genisol (@safak45x)\n"
+"Language-Team: none\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/Objects/Currencies.vala:44
 msgid "US Dollar"
-msgstr ""
+msgstr "Amerikan Doları"
 
 #: src/Objects/Currencies.vala:47
 msgid "Brazilian Real"
-msgstr ""
+msgstr "Btazilya Reali"
 
 #: src/Objects/Currencies.vala:50
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/Objects/Currencies.vala:53
 msgid "British Pound"
-msgstr ""
+msgstr "İngiliz Sterlini"
 
 #: src/Objects/Currencies.vala:56
 msgid "Australian Dollar"
-msgstr ""
+msgstr "Avusturalya Doları"
 
 #: src/Objects/Currencies.vala:59
 msgid "Canadian Dollar"
-msgstr ""
+msgstr "Kanada Doları"
 
 #: src/Objects/Currencies.vala:62
 msgid "Chinese Yuan"
-msgstr ""
+msgstr "Cin Yuanı"
 
 #: src/Objects/Currencies.vala:65
 msgid "Indian Rupee"
-msgstr ""
+msgstr "Hindistan Rupisi"
 
 #: src/Objects/Currencies.vala:68
 msgid "Japanese Yen"
-msgstr ""
+msgstr "Japon Yeni"
 
 #: src/Objects/Currencies.vala:71
 msgid "Russian Ruble"
-msgstr ""
+msgstr "Rus Rublesi"
 
 #: src/Objects/Currencies.vala:74
 msgid "Swiss Franc"
-msgstr ""
+msgstr "İsviçre Frangı"
 
 #: src/Objects/Currencies.vala:77
 msgid "Argentinian Peso"
-msgstr ""
+msgstr "Arjantin Pesosu"
 
 #: src/Objects/Currencies.vala:80
 msgid "Czech Koruna"
-msgstr ""
+msgstr "Çek Korunası"
 
 #: src/Objects/Currencies.vala:83
+#, fuzzy
 msgid "Mexican Peso"
-msgstr ""
+msgstr "Meksika Pesosu"
 
 #: src/Objects/Currencies.vala:86
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Macar Forinti"
 
 #: src/Objects/Currencies.vala:89
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Kazakistan Tengesi"
 
 #: src/MainWindow.vala:80
 msgid "Updated every 10 minutes"
-msgstr ""
+msgstr "Her 10 dakikada bir güncellenir"
+0 comments on commit 0897210
