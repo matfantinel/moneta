@@ -26,6 +26,7 @@ namespace Moneta {
     public class MainWindow : Gtk.ApplicationWindow {
         public Gtk.Label label_result;
         public Gtk.Label label_info;
+        public Gtk.Button notice_btn;
         public Gtk.Label label_history;
         public Gtk.ComboBox source_currency;
         public Gtk.ComboBox target_currency;
@@ -83,6 +84,20 @@ namespace Moneta {
             label_result.set_halign(Gtk.Align.START);
             label_history = new Gtk.Label ("");
 
+
+            notice_btn = new Gtk.Button.with_label(_("⚠️ Important notice"));
+            notice_btn.clicked.connect(() => {
+                var notice_dialog = new Granite.MessageDialog.with_image_from_icon_name (
+                    "Moneta is changing",
+                    "Unfortunately, the API that feeds Moneta with the currency info is changing. It will become a paid solution, and since Moneta is free with no form of monetization, it's not possible to continue using it at the present time. \n\nBut Moneta is not dying! Around March 10th, I will update the app to version 2.0, using a new API. This one is less featured than the previous one, so you may notice a few changes: \n\n- The exchange rate will only update once a day;\n- Some of the existing currencies may not be supported by the new API;\n\nThat being said, I'll still be looking for solutions to improve Moneta in the future. If you want to help in any way, you can contact me on GitHub!",
+                    "system-run",
+                    Gtk.ButtonsType.CLOSE
+                );
+
+                notice_dialog.run();
+                notice_dialog.destroy();
+            });
+
             aicon = new Gtk.Image ();
             aicon.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
 
@@ -106,7 +121,8 @@ namespace Moneta {
             grid.attach(target_currency, 2, 1, 2, 1);
             grid.attach(label_result, 1, 2, 3, 2);
             grid.attach (avg_grid, 0, 4, 1, 1);
-            grid.attach(label_info, 1, 4, 3, 2);
+            //  grid.attach(label_info, 1, 4, 3, 2);
+            grid.attach(notice_btn, 1, 4, 3, 2);
 
             stack = new Gtk.Stack();
             stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
