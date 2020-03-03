@@ -33,7 +33,8 @@ namespace Moneta {
         public Gtk.Image aicon;
 
         public double avg;
-        public double avg_history;
+        //  public double avg_history;
+        public string last_server_update;
         public string source_iso;
         public string target_iso;
 
@@ -58,7 +59,7 @@ namespace Moneta {
 
             setup_comboboxes();
 
-            if(settings.source >= 0) {
+            if(settings.source >= 0 && settings.source != 11 && settings.source != 15) { //11 and 15 have been removed - but we don't know what will come from settings...
                 source_currency.set_active((Currency)(settings.source));
                 source_iso = ((Currency)settings.source).get_iso_code();
             } else {
@@ -66,18 +67,18 @@ namespace Moneta {
                 source_iso = Currency.US_DOLLAR.get_iso_code();
             }
 
-            if(settings.target >= 0) {
+            if(settings.target >= 0 && settings.target != 11 && settings.target != 15) { //11 and 15 have been removed - but we don't know what will come from settings...
                 target_currency.set_active((Currency)(settings.target));
                 target_iso = ((Currency)settings.target).get_iso_code();
             } else {
-                target_currency.set_active(Currency.US_DOLLAR);
-                target_iso = Currency.US_DOLLAR.get_iso_code();
+                target_currency.set_active(Currency.EURO);
+                target_iso = Currency.EURO.get_iso_code();
             }
 
             label_result = new Gtk.Label("");
             label_result.set_halign(Gtk.Align.END);
             label_result.hexpand = true;
-            label_info = new Gtk.Label(_("Updated every 10 minutes"));
+            label_info = new Gtk.Label((""));
             label_info.set_halign(Gtk.Align.END);
             label_info.hexpand = true;
             label_result.set_halign(Gtk.Align.START);
@@ -199,11 +200,11 @@ namespace Moneta {
                 Currency.JAPANESE_YEN.get_friendly_name(),
                 Currency.RUSSIAN_RUBLE.get_friendly_name(),
                 Currency.SWISS_FRANC.get_friendly_name(),
-                Currency.ARGENTINIAN_PESO.get_friendly_name(),
+                //  Currency.ARGENTINIAN_PESO.get_friendly_name(),
                 Currency.CZECH_KORUNA.get_friendly_name(),
                 Currency.MEXICAN_PESO.get_friendly_name(),
                 Currency.HUNGARIAN_FORINT.get_friendly_name(),
-                Currency.KAZAKHSTANI_TENGE.get_friendly_name()
+                //  Currency.KAZAKHSTANI_TENGE.get_friendly_name()
             };
             Gtk.ListStore source_list_store = new Gtk.ListStore(1, typeof(string));
 
@@ -255,8 +256,8 @@ namespace Moneta {
                 target_currency.set_active(Currency.US_DOLLAR);
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
-            
-            var uri = "https://fcsapi.com/api/forex/latest?symbol=" + target_iso + "/" + source_iso + "&access_key=R32PaI8NK9B6uHGvP6FvfiJXlwcAMRHu7KpMAK46vrmzhBxXQ";
+
+            var uri = "https://api-moneta-forex.herokuapp.com/latest?from=" + target_iso + "&to=" + source_iso;
             
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
@@ -270,31 +271,29 @@ namespace Moneta {
                 parser.load_from_data((string) message.response_body.flatten().data, -1);
                 var root_object = parser.get_root().get_object();
                 if (root_object == null) {
-                    avg = -1;
-                    avg_history = 0;
-                    return false;
-                }
-
-                var status = root_object.get_boolean_member("status");
-
-                if (!status) {
                     avg = 0;
-                    avg_history = 0;
+                    //  avg_history = 0;
                     return false;
                 }
 
-                var response_array = root_object.get_array_member("response");
-                var response_object = response_array.get_object_element(0);
-                
-                var price = response_object.get_string_member("price");
-                if (price != null && price.length > 0) {
-                    avg = price.to_double();
+                var date = root_object.get_string_member("date");
+                if (date != null && date.length > 0) {
+                    var dateSplit = date.split("-");
+                    var dateTime = new DateTime.utc(dateSplit[0].to_int(), dateSplit[1].to_int(), dateSplit[2].to_int(), 0, 0, 0);
+                    last_server_update = dateTime.format("%x");
                 }
 
-                var chg_per = response_object.get_string_member("chg_per");
-                if (chg_per != null && chg_per.length > 0) {                    
-                    avg_history = chg_per.to_double();
+                var rates_object = root_object.get_object_member("rates");
+                var target_rate = rates_object.get_double_member(source_iso);
+                
+                if (target_rate > 0) {
+                    avg = target_rate;
                 }
+
+                //  var chg_per = response_object.get_string_member("chg_per");
+                //  if (chg_per != null && chg_per.length > 0) {                    
+                //      avg_history = chg_per.to_double();
+                //  }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
                 stdout.printf("🛑 Error fetching data: "+ e.message + "\n");
@@ -316,29 +315,31 @@ namespace Moneta {
 
             if (avg > 0) {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
-            } else if (avg == 0){
+            } else {
                 label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
-            } else {
-                label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
             }
 
-            label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
-
-            set_history_styles();
-        }
-
-        public void set_history_styles() {
-            if (avg_history <= 0.0) {
-                aicon.icon_name = "go-down-symbolic";
-                var context = aicon.get_style_context ();
-                context.add_class ("negative-icon");
-                context.remove_class ("positive-icon");
-            } else {
-                aicon.icon_name = "go-up-symbolic";
-                var context = aicon.get_style_context ();
-                context.remove_class ("negative-icon");
-                context.add_class ("positive-icon");
+            if (last_server_update != null) {
+                label_info.set_label("Last updated on " + last_server_update);
             }
+
+            //  label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
+
+            //  set_history_styles();
         }
+
+        //  public void set_history_styles() {
+        //      if (avg_history <= 0.0) {
+        //          aicon.icon_name = "go-down-symbolic";
+        //          var context = aicon.get_style_context ();
+        //          context.add_class ("negative-icon");
+        //          context.remove_class ("positive-icon");
+        //      } else {
+        //          aicon.icon_name = "go-up-symbolic";
+        //          var context = aicon.get_style_context ();
+        //          context.remove_class ("negative-icon");
+        //          context.add_class ("positive-icon");
+        //      }
+        //  }
     }
 }

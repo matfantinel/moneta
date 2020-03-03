@@ -21,22 +21,22 @@
 
 namespace Moneta {
     public enum Currency {
-        US_DOLLAR,
-        BRAZILIAN_REAL,
-        EURO,
-        POUND_STERLING,
-        AUSTRALIAN_DOLLAR,
-        CANADIAN_DOLLAR,
-        CHINESE_YUAN,
-        INDIAN_RUPEE,
-        JAPANESE_YEN,
-        RUSSIAN_RUBLE,
-        SWISS_FRANC,
-        ARGENTINIAN_PESO,
-        CZECH_KORUNA,
-        MEXICAN_PESO,
-        HUNGARIAN_FORINT,
-        KAZAKHSTANI_TENGE;
+        US_DOLLAR = 0,
+        BRAZILIAN_REAL = 1,
+        EURO = 2,
+        POUND_STERLING = 3,
+        AUSTRALIAN_DOLLAR = 4,
+        CANADIAN_DOLLAR = 5,
+        CHINESE_YUAN = 6,
+        INDIAN_RUPEE = 7,
+        JAPANESE_YEN = 8,
+        RUSSIAN_RUBLE = 9,
+        SWISS_FRANC = 10,
+        //  ARGENTINIAN_PESO = 11, //sadly, new API used on v2.0 does not support this
+        CZECH_KORUNA = 12,
+        MEXICAN_PESO = 13,
+        HUNGARIAN_FORINT = 14;
+        //  KAZAKHSTANI_TENGE = 15;  //sadly, new API used on v2.0 does not support this
 
         public string get_friendly_name() {
             switch (this) {   
@@ -73,8 +73,8 @@ namespace Moneta {
                 case SWISS_FRANC:
                     return _("Swiss Franc");
 
-                case ARGENTINIAN_PESO:
-                    return _("Argentinian Peso");
+                //  case ARGENTINIAN_PESO:
+                //      return _("Argentinian Peso");
 
                 case CZECH_KORUNA:
                     return _("Czech Koruna");
@@ -85,8 +85,8 @@ namespace Moneta {
                 case HUNGARIAN_FORINT:
                     return _("Hungarian Forint");
 
-                case KAZAKHSTANI_TENGE:
-                    return _("Kazakhstani Tenge");
+                //  case KAZAKHSTANI_TENGE:
+                //      return _("Kazakhstani Tenge");
 
                 default:
                     assert_not_reached();
@@ -128,8 +128,8 @@ namespace Moneta {
                 case SWISS_FRANC:
                     return "CHF";
 
-                case ARGENTINIAN_PESO:
-                    return "ARS";
+                //  case ARGENTINIAN_PESO:
+                //      return "ARS";
 
                 case CZECH_KORUNA:
                     return "CZK";
@@ -140,8 +140,8 @@ namespace Moneta {
                 case HUNGARIAN_FORINT:
                     return "HUF";
 
-                case KAZAKHSTANI_TENGE:
-                    return "KZT";
+                //  case KAZAKHSTANI_TENGE:
+                //      return "KZT";
     
                 default:
                     assert_not_reached();
@@ -183,8 +183,8 @@ namespace Moneta {
                 case SWISS_FRANC:
                     return "CHF";
 
-                case ARGENTINIAN_PESO:
-                    return "$";
+                //  case ARGENTINIAN_PESO:
+                //      return "$";
 
                 case CZECH_KORUNA:
                     return "Kč";
@@ -195,8 +195,8 @@ namespace Moneta {
                 case HUNGARIAN_FORINT:
                     return "Ft";
 
-                case KAZAKHSTANI_TENGE:
-                    return "₸";
+                //  case KAZAKHSTANI_TENGE:
+                //      return "₸";
     
                 default:
                     assert_not_reached();
