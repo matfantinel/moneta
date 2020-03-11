@@ -33,7 +33,7 @@ namespace Moneta {
         public Gtk.Image aicon;
 
         public double avg;
-        //  public double avg_history;
+        public double avg_history;
         public string last_server_update;
         public string source_iso;
         public string target_iso;
@@ -59,7 +59,7 @@ namespace Moneta {
 
             setup_comboboxes();
 
-            if(settings.source >= 0 && settings.source != 11 && settings.source != 15) { //11 and 15 have been removed - but we don't know what will come from settings...
+            if(settings.source >= 0) {
                 source_currency.set_active((Currency)(settings.source));
                 source_iso = ((Currency)settings.source).get_iso_code();
             } else {
@@ -67,7 +67,7 @@ namespace Moneta {
                 source_iso = Currency.US_DOLLAR.get_iso_code();
             }
 
-            if(settings.target >= 0 && settings.target != 11 && settings.target != 15) { //11 and 15 have been removed - but we don't know what will come from settings...
+            if(settings.target >= 0) {
                 target_currency.set_active((Currency)(settings.target));
                 target_iso = ((Currency)settings.target).get_iso_code();
             } else {
@@ -78,7 +78,7 @@ namespace Moneta {
             label_result = new Gtk.Label("");
             label_result.set_halign(Gtk.Align.END);
             label_result.hexpand = true;
-            label_info = new Gtk.Label((""));
+            label_info = new Gtk.Label(("Updated every hour"));
             label_info.set_halign(Gtk.Align.END);
             label_info.hexpand = true;
             label_result.set_halign(Gtk.Align.START);
@@ -200,11 +200,11 @@ namespace Moneta {
                 Currency.JAPANESE_YEN.get_friendly_name(),
                 Currency.RUSSIAN_RUBLE.get_friendly_name(),
                 Currency.SWISS_FRANC.get_friendly_name(),
-                //  Currency.ARGENTINIAN_PESO.get_friendly_name(),
+                Currency.ARGENTINIAN_PESO.get_friendly_name(),
                 Currency.CZECH_KORUNA.get_friendly_name(),
                 Currency.MEXICAN_PESO.get_friendly_name(),
                 Currency.HUNGARIAN_FORINT.get_friendly_name(),
-                //  Currency.KAZAKHSTANI_TENGE.get_friendly_name()
+                Currency.KAZAKHSTANI_TENGE.get_friendly_name()
             };
             Gtk.ListStore source_list_store = new Gtk.ListStore(1, typeof(string));
 
@@ -257,7 +257,7 @@ namespace Moneta {
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
 
-            var uri = "https://api-moneta-forex.herokuapp.com/latest?from=" + target_iso + "&to=" + source_iso;
+            var uri = "http://localhost:3000/forex?from=" + target_iso + "&to=" + source_iso;
             
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
@@ -290,10 +290,10 @@ namespace Moneta {
                     avg = target_rate;
                 }
 
-                //  var chg_per = response_object.get_string_member("chg_per");
-                //  if (chg_per != null && chg_per.length > 0) {                    
-                //      avg_history = chg_per.to_double();
-                //  }
+                var chg_per = response_object.get_string_member("chg_per");
+                if (chg_per != null && chg_per.length > 0) {                    
+                    avg_history = chg_per.to_double();
+                }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
                 stdout.printf("🛑 Error fetching data: "+ e.message + "\n");
