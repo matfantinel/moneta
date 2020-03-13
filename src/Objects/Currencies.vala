@@ -21,23 +21,23 @@
 
 namespace Moneta {
     public enum Currency {
-        US_DOLLAR,
-        BRAZILIAN_REAL,
-        EURO,
-        POUND_STERLING,
-        AUSTRALIAN_DOLLAR,
-        CANADIAN_DOLLAR,
-        CHINESE_YUAN,
-        INDIAN_RUPEE,
-        JAPANESE_YEN,
-        RUSSIAN_RUBLE,
-        SWISS_FRANC,
-        ARGENTINIAN_PESO,
-        CZECH_KORUNA,
-        MEXICAN_PESO,
-        HUNGARIAN_FORINT,
-        KAZAKHSTANI_TENGE,
-        TAIWAN_DOLLAR;
+        US_DOLLAR = 0,
+        BRAZILIAN_REAL = 1,
+        EURO = 2,
+        POUND_STERLING = 3,
+        AUSTRALIAN_DOLLAR = 4,
+        CANADIAN_DOLLAR = 5,
+        CHINESE_YUAN = 6,
+        INDIAN_RUPEE = 7,
+        JAPANESE_YEN = 8,
+        RUSSIAN_RUBLE = 9,
+        SWISS_FRANC = 10,
+        ARGENTINIAN_PESO = 11,
+        CZECH_KORUNA = 12,
+        MEXICAN_PESO = 13,
+        HUNGARIAN_FORINT = 14,
+        KAZAKHSTANI_TENGE = 15,
+        TAIWAN_DOLLAR = 16;
 
         public string get_friendly_name() {
             switch (this) {   
