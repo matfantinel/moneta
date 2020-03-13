@@ -11,11 +11,21 @@
     <p>Features:</p>
     <ul>
       <li>Stays on top of your desktop, giving you a quick glimpse of the exchange rates during the day</li>
-      <li>Supports many different currencies and updates the rates many times throughout the day</li>
+      <li>Supports many different currencies and updates the rates every hour throughout weekdays</li>
       <li>Indicates whether the rate has increased or decreased compared to previous day</li>
     </ul>
   </description>
   <releases>  
+    <release version="2.0.0" date="2020-03-13">
+      <description>          
+        <p>Moneta v2 is here! Some changes were made in order to make sure the app stays useful and still updates throughout the day:</p>                
+        <ul>
+          <li>ℹ️ New source of information (API)</li>
+          <li>🕐️ Instead of updating every 10 minutes, updates are now hourly (on weekdays only)</li>
+          <li>👀️ Moneta now displays the last time the information was displayed for more transparency</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.5" date="2020-03-03">
       <description>                          
         <ul>
