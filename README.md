@@ -10,7 +10,7 @@
   <a href="https://github.com/matfantinel/moneta/blob/master/COPYING">
     <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
   </a>
-  <a href="https://travis-ci.org/calo001/fondo">
+  <a href="https://travis-ci.com/matfantinel/moneta">
     <img src="https://travis-ci.org/matfantinel/moneta.svg?branch=master">
   </a>
 </p>

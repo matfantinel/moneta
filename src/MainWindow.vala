@@ -50,7 +50,7 @@ namespace Moneta {
             );
         }        
 
-        construct {
+        construct {            
             setup_window_styles();
 
             settings = AppSettings.get_default();
@@ -144,7 +144,7 @@ namespace Moneta {
 
             if(x != -1 && y != -1) {
                 move(x, y);
-            }
+            }            
 
             button_press_event.connect((e) => {
                 if(e.button == Gdk.BUTTON_PRIMARY) {
@@ -175,7 +175,7 @@ namespace Moneta {
             var titlebar = new Gtk.HeaderBar();
             titlebar.has_subtitle = false;
             titlebar.show_close_button = true;
-
+            titlebar.custom_title = new Gtk.Label("Moneta");
 
             var titlebar_style_context = titlebar.get_style_context();
             titlebar_style_context.add_class(Gtk.STYLE_CLASS_FLAT);
@@ -183,6 +183,7 @@ namespace Moneta {
             titlebar_style_context.add_class("moneta-toolbar");
 
             this.set_titlebar(titlebar);
+            this.set_title("Moneta");
 
             this.get_style_context().add_class("rounded");            
         }
@@ -204,7 +205,8 @@ namespace Moneta {
                 Currency.CZECH_KORUNA.get_friendly_name(),
                 Currency.MEXICAN_PESO.get_friendly_name(),
                 Currency.HUNGARIAN_FORINT.get_friendly_name(),
-                Currency.KAZAKHSTANI_TENGE.get_friendly_name()
+                Currency.KAZAKHSTANI_TENGE.get_friendly_name(),
+                Currency.TAIWAN_DOLLAR.get_friendly_name()
             };
             Gtk.ListStore source_list_store = new Gtk.ListStore(1, typeof(string));
 
@@ -335,10 +337,13 @@ namespace Moneta {
 
             if (avg > 0) {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
+                this.set_title("%s %.4f / 1 %s".printf(curr_symbol, avg, target_curr_symbol));
             } else if (avg == 0) {
                 label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
+                this.set_title("Moneta - No info");
             } else {
                 label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
+                this.set_title("Moneta - No connection");
             }
 
             if (last_server_update != null) {

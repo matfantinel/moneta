@@ -16,6 +16,17 @@
     </ul>
   </description>
   <releases>  
+    <release version="1.1.5" date="2020-03-03">
+      <description>                          
+        <ul>
+          <li>⚠️ Important update about the future of Moneta</li>
+          <li>✨️ New currency: Kazakhstani Tenge (Arthur Aslanyan | @asahnoln)</li>
+          <li>🇷🇺️ Updated Russian translations (Arthur Aslanyan | @asahnoln)</li>
+          <li>✨️ New currency: Taiwan Dollar</li>
+          <li>👀️ Moneta now shows the current exchange rate in its window title in the taskbar if your OS supports it</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.4" date="2020-02-15">
       <description>
         <ul>

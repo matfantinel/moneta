@@ -36,7 +36,8 @@ namespace Moneta {
         CZECH_KORUNA = 12,
         MEXICAN_PESO = 13,
         HUNGARIAN_FORINT = 14,
-        KAZAKHSTANI_TENGE = 15;
+        KAZAKHSTANI_TENGE = 15,
+        TAIWAN_DOLLAR = 16;
 
         public string get_friendly_name() {
             switch (this) {   
@@ -87,6 +88,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return _("Kazakhstani Tenge");
+
+                case TAIWAN_DOLLAR:
+                    return _("Taiwan Dollar");
 
                 default:
                     assert_not_reached();
@@ -142,6 +146,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return "KZT";
+
+                case TAIWAN_DOLLAR:
+                    return "TWD";
     
                 default:
                     assert_not_reached();
@@ -197,6 +204,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return "₸";
+
+                case TAIWAN_DOLLAR:
+                    return "NT$";
     
                 default:
                     assert_not_reached();
