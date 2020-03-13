@@ -257,7 +257,7 @@ namespace Moneta {
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
 
-            var uri = "http://localhost:3000/forex?from=" + target_iso + "&to=" + source_iso;
+            var uri = "https://moneta-api.herokuapp.com/forex?from=" + target_iso + "&to=" + source_iso;
             
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
@@ -271,28 +271,48 @@ namespace Moneta {
                 parser.load_from_data((string) message.response_body.flatten().data, -1);
                 var root_object = parser.get_root().get_object();
                 if (root_object == null) {
-                    avg = 0;
-                    //  avg_history = 0;
+                    avg = -1;
+                    avg_history = 0;
                     return false;
                 }
 
-                var date = root_object.get_string_member("date");
-                if (date != null && date.length > 0) {
-                    var dateSplit = date.split("-");
-                    var dateTime = new DateTime.utc(dateSplit[0].to_int(), dateSplit[1].to_int(), dateSplit[2].to_int(), 0, 0, 0);
-                    last_server_update = dateTime.format("%x");
+                var status = root_object.get_int_member("status");
+
+                if (status != 200) {
+                    if (avg <= 0) {
+
+                        avg = 0;
+                        avg_history = 0;
+                    }
+                    return false;
                 }
 
-                var rates_object = root_object.get_object_member("rates");
-                var target_rate = rates_object.get_double_member(source_iso);
+                var response_array = root_object.get_array_member("result");
+                var response_object = response_array.get_object_element(0);
                 
-                if (target_rate > 0) {
-                    avg = target_rate;
-                }
+                var price = response_object.get_double_member("price");
+                avg = price;
 
                 var chg_per = response_object.get_string_member("chg_per");
                 if (chg_per != null && chg_per.length > 0) {                    
                     avg_history = chg_per.to_double();
+                }
+
+                var last_update = response_object.get_string_member("last_server_update");
+                if (last_update != null && last_update.length > 0) {
+                    var dateTime = new DateTime.from_iso8601(last_update, new TimeZone.utc()).to_local();
+
+                    last_server_update = "";
+                    var is_today = dateTime.format("%x") == new GLib.DateTime.now().format("%x");
+                    if (is_today) {
+                        last_server_update += _("today");
+                    } else {
+                        last_server_update += dateTime.format("%x");
+                    }
+
+                    var time_text_split = dateTime.format("%X").split(":");
+
+                    last_server_update += " " + time_text_split[0].concat(":", time_text_split[1]);                    
                 }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
@@ -315,31 +335,33 @@ namespace Moneta {
 
             if (avg > 0) {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
-            } else {
+            } else if (avg == 0) {
                 label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
+            } else {
+                label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
             }
 
             if (last_server_update != null) {
-                label_info.set_label("Last updated on " + last_server_update);
+                label_info.set_label("Last updated " + last_server_update);
             }
 
-            //  label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
+            label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
 
-            //  set_history_styles();
+            set_history_styles();
         }
 
-        //  public void set_history_styles() {
-        //      if (avg_history <= 0.0) {
-        //          aicon.icon_name = "go-down-symbolic";
-        //          var context = aicon.get_style_context ();
-        //          context.add_class ("negative-icon");
-        //          context.remove_class ("positive-icon");
-        //      } else {
-        //          aicon.icon_name = "go-up-symbolic";
-        //          var context = aicon.get_style_context ();
-        //          context.remove_class ("negative-icon");
-        //          context.add_class ("positive-icon");
-        //      }
-        //  }
+        public void set_history_styles() {
+            if (avg_history <= 0.0) {
+                aicon.icon_name = "go-down-symbolic";
+                var context = aicon.get_style_context ();
+                context.add_class ("negative-icon");
+                context.remove_class ("positive-icon");
+            } else {
+                aicon.icon_name = "go-up-symbolic";
+                var context = aicon.get_style_context ();
+                context.remove_class ("negative-icon");
+                context.add_class ("positive-icon");
+            }
+        }
     }
 }
