@@ -347,7 +347,7 @@ namespace Moneta {
             target_curr_symbol = ((Currency)settings.target).get_symbol();            
 
             if (avg > 0) {
-                label_result.set_markup("""<span font="22">%s</span> <span font="30">%.2f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
+                label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
                 this.set_title("%s %.4f / 1 %s".printf(curr_symbol, avg, target_curr_symbol));
             } else if (avg == 0) {
                 label_result.set_markup("""<span font="22">%s</span>""".printf(_("No info")));
