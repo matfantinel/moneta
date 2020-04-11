@@ -16,6 +16,16 @@
     </ul>
   </description>
   <releases>  
+    <release version="2.1.0" date="2020-04-10">
+      <description>          
+        <p>A few translation updates and a fix for the app freezing when changing currencies</p>
+        <ul>
+          <li>✔️ Fix freeze when changing currencies (Rajkumar S | @rajkumaar23)</li>
+          <li>🇧🇷️🇵🇹️ Portuguese translation</li>
+          <li>🇨🇵️🇪🇦️ Updated spanish and french translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.0" date="2020-03-13">
       <description>          
         <p>Moneta v2 is here! Some changes were made in order to make sure the app stays useful and still updates throughout the day:</p>                
