@@ -264,8 +264,9 @@ namespace Moneta {
             }
 
             var uri = "https://moneta-api.herokuapp.com/forex?from=" + target_iso + "&to=" + source_iso;
-            label_result.set_markup("""<span font="18">Please wait</span>""");
-            label_history.set_markup ("""<span font="10">0.00</span>""");
+            var loadingText = _("Fetching info...");
+            label_result.set_markup("""<span font="18">%s</span>""".printf(loadingText));
+            label_history.set_markup ("""<span font="10">%.2f</span>""".printf(0));
             
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
@@ -349,15 +350,15 @@ namespace Moneta {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.2f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
                 this.set_title("%s %.4f / 1 %s".printf(curr_symbol, avg, target_curr_symbol));
             } else if (avg == 0) {
-                label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
-                this.set_title("Moneta - No info");
+                label_result.set_markup("""<span font="22">%s</span>""".printf(_("No info")));
+                this.set_title(_("Moneta - No info"));
             } else {
-                label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
-                this.set_title("Moneta - No connection");
+                label_result.set_markup("""<span font="22">%s</span>""".printf(_("No connection")));
+                this.set_title(_("Moneta - No connection"));
             }
 
             if (last_server_update != null) {
-                label_info.set_label("Last updated " + last_server_update);
+                label_info.set_label(_("Last updated ") + last_server_update);
             }
 
             label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
