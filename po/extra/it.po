@@ -100,7 +100,7 @@ msgstr "🎨 Correggi i colori su temi non predefiniti (Marcelo Fantinel | @marf
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:31
 msgid "Initial Release 💰️"
-msgstr "
+msgstr ""
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:67
 msgid "Matheus Fantinel"

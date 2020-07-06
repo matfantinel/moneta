@@ -42,7 +42,7 @@
         <ul>
           <li>ℹ️ New source of information (API)</li>
           <li>🕐️ Instead of updating every 10 minutes, updates are now hourly (on weekdays only)</li>
-          <li>👀️ Moneta now displays the last time the information was displayed for more transparency</li>
+          <li>👀️ Moneta now displays the last time the information was updated for more transparency</li>
         </ul>
       </description>
     </release>
