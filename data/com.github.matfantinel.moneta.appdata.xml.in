@@ -18,9 +18,11 @@
   <releases>  
     <release version="2.2.0" date="2020-07-06">
       <description>          
-        <p>Moneta's icon has a fresh new look!</p>
+        <p>Moneta's icon has a fresh new look! Plus new translations.</p>
         <ul>
           <li>✨ New icon by Nararyans R.I. (@Fatih20)</li>
+          <li>🇮🇹 Italian translation (@albanobattistella)</li>
+          <li>🇹🇷 Turkish translation (@safak45x)</li>
         </ul>
       </description>
     </release>
