@@ -1,5 +1,5 @@
 /*
-* Copyright(c) 2011-2019 Matheus Fantinel
+* Copyright(c) 2011-2020 Matheus Fantinel
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -21,22 +21,23 @@
 
 namespace Moneta {
     public enum Currency {
-        US_DOLLAR,
-        BRAZILIAN_REAL,
-        EURO,
-        POUND_STERLING,
-        AUSTRALIAN_DOLLAR,
-        CANADIAN_DOLLAR,
-        CHINESE_YUAN,
-        INDIAN_RUPEE,
-        JAPANESE_YEN,
-        RUSSIAN_RUBLE,
-        SWISS_FRANC,
-        ARGENTINIAN_PESO,
-        CZECH_KORUNA,
-        MEXICAN_PESO,
-        HUNGARIAN_FORINT,
-        KAZAKHSTANI_TENGE;
+        US_DOLLAR = 0,
+        BRAZILIAN_REAL = 1,
+        EURO = 2,
+        POUND_STERLING = 3,
+        AUSTRALIAN_DOLLAR = 4,
+        CANADIAN_DOLLAR = 5,
+        CHINESE_YUAN = 6,
+        INDIAN_RUPEE = 7,
+        JAPANESE_YEN = 8,
+        RUSSIAN_RUBLE = 9,
+        SWISS_FRANC = 10,
+        ARGENTINIAN_PESO = 11,
+        CZECH_KORUNA = 12,
+        MEXICAN_PESO = 13,
+        HUNGARIAN_FORINT = 14,
+        KAZAKHSTANI_TENGE = 15,
+        TAIWAN_DOLLAR = 16;
 
         public string get_friendly_name() {
             switch (this) {   
@@ -87,6 +88,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return _("Kazakhstani Tenge");
+
+                case TAIWAN_DOLLAR:
+                    return _("Taiwan Dollar");
 
                 default:
                     assert_not_reached();
@@ -142,6 +146,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return "KZT";
+
+                case TAIWAN_DOLLAR:
+                    return "TWD";
     
                 default:
                     assert_not_reached();
@@ -197,6 +204,9 @@ namespace Moneta {
 
                 case KAZAKHSTANI_TENGE:
                     return "₸";
+
+                case TAIWAN_DOLLAR:
+                    return "NT$";
     
                 default:
                     assert_not_reached();

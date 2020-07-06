@@ -1,119 +1,114 @@
-# magyar (Hungarian) translations for com.github.matfantinel.moneta package.
+# Portuguese translations for com.github.matfantinel.moneta package.
 # Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.matfantinel.moneta package.
-# Óvári (@ovari), 2020.
+# Automatically generated, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 22:54-0300\n"
-"PO-Revision-Date: 2020-01-31 13:44+0100\n"
-"Last-Translator: Óvári (@ovari)\n"
+"PO-Revision-Date: 2020-04-10 22:54-0300\n"
+"Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
-"Language: hu\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: src/Objects/Currencies.vala:45
 msgid "US Dollar"
-msgstr "amerikai dollár"
+msgstr "Dólar"
 
 #: src/Objects/Currencies.vala:48
 msgid "Brazilian Real"
-msgstr "brazíliai real"
+msgstr "Real"
 
 #: src/Objects/Currencies.vala:51
 msgid "Euro"
-msgstr "euró"
+msgstr ""
 
 #: src/Objects/Currencies.vala:54
 msgid "British Pound"
-msgstr "brit font"
+msgstr "Libra Esterlina"
 
 #: src/Objects/Currencies.vala:57
 msgid "Australian Dollar"
-msgstr "ausztrál dollár"
+msgstr "Dólar Australiano"
 
 #: src/Objects/Currencies.vala:60
 msgid "Canadian Dollar"
-msgstr "kanadai dollár"
+msgstr "Dólar Canadense"
 
 #: src/Objects/Currencies.vala:63
 msgid "Chinese Yuan"
-msgstr "kínai jüan"
+msgstr "Yuan"
 
 #: src/Objects/Currencies.vala:66
 msgid "Indian Rupee"
-msgstr "indiai rúpia"
+msgstr "Rúpia Indiana"
 
 #: src/Objects/Currencies.vala:69
 msgid "Japanese Yen"
-msgstr "japán jen"
+msgstr "Yen"
 
 #: src/Objects/Currencies.vala:72
 msgid "Russian Ruble"
-msgstr "orosz rubel"
+msgstr "Rublo Russo"
 
 #: src/Objects/Currencies.vala:75
 msgid "Swiss Franc"
-msgstr "svájci frank"
+msgstr "Franco Suíço"
 
 #: src/Objects/Currencies.vala:78
 msgid "Argentinian Peso"
-msgstr "argentin peso"
+msgstr "Peso Argentino"
 
 #: src/Objects/Currencies.vala:81
 msgid "Czech Koruna"
-msgstr "cseh korona"
+msgstr "Coroa Tcheca"
 
 #: src/Objects/Currencies.vala:84
-#, fuzzy
 msgid "Mexican Peso"
-msgstr "argentin peso"
+msgstr "Peso Mexicano"
 
 #: src/Objects/Currencies.vala:87
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Florim Húngaro"
 
 #: src/Objects/Currencies.vala:90
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Tenge Cazaque"
 
 #: src/Objects/Currencies.vala:93
-#, fuzzy
 msgid "Taiwan Dollar"
-msgstr "kanadai dollár"
+msgstr "Dólar Taiwanes"
 
 #: src/MainWindow.vala:267
 msgid "Fetching info..."
-msgstr ""
+msgstr "Atualizando..."
 
 #: src/MainWindow.vala:322
 msgid "today"
-msgstr ""
+msgstr "hoje"
 
 #: src/MainWindow.vala:353
 msgid "No info"
-msgstr ""
+msgstr "Sem informações"
 
 #: src/MainWindow.vala:354
 msgid "Moneta - No info"
-msgstr ""
+msgstr "Moneta - Sem informações"
 
 #: src/MainWindow.vala:356
 msgid "No connection"
-msgstr ""
+msgstr "Desconectado"
 
 #: src/MainWindow.vala:357
 msgid "Moneta - No connection"
-msgstr ""
+msgstr "Moneta - Desconectado"
 
 #: src/MainWindow.vala:361
 msgid "Last updated "
-msgstr ""
-
-#~ msgid "Updated every 10 minutes"
-#~ msgstr "10 percenként frissítve"
+msgstr "Atualizado "

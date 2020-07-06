@@ -2,7 +2,7 @@
 Name=Moneta
 GenericName=Currency Rates
 Comment=Follow currency rates easily from your desktop.
-Categories=Utility;
+Categories=GTK;Utility;Office;Finance;Economy;
 Exec=com.github.matfantinel.moneta %U
 Icon=com.github.matfantinel.moneta
 Terminal=false

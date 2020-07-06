@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.matfantinel.moneta package.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.matfantinel.moneta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-20 11:18+0600\n"
+"PO-Revision-Date: 2020-03-13 23:13+0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: Italiano <LL@li.org>\n"
+"Language: IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/Objects/Currencies.vala:44
+msgid "US Dollar"
+msgstr "Dollaro Americano"
+
+#: src/Objects/Currencies.vala:47
+msgid "Brazilian Real"
+msgstr "Real Brasiliano"
+
+#: src/Objects/Currencies.vala:50
+msgid "Euro"
+msgstr "Euro"
+
+#: src/Objects/Currencies.vala:53
+msgid "British Pound"
+msgstr "Sterlina Inglese"
+
+#: src/Objects/Currencies.vala:56
+msgid "Australian Dollar"
+msgstr "Dollaro Australiano"
+
+#: src/Objects/Currencies.vala:59
+msgid "Canadian Dollar"
+msgstr "Dollaro Canadese"
+
+#: src/Objects/Currencies.vala:62
+msgid "Chinese Yuan"
+msgstr "Yuan Cinese"
+
+#: src/Objects/Currencies.vala:65
+msgid "Indian Rupee"
+msgstr "Rupia Indiana"
+
+#: src/Objects/Currencies.vala:68
+msgid "Japanese Yen"
+msgstr "Yen Giapponese"
+
+#: src/Objects/Currencies.vala:71
+msgid "Russian Ruble"
+msgstr "Rublo Russo"
+
+#: src/Objects/Currencies.vala:74
+msgid "Swiss Franc"
+msgstr "Franco Svizzero"
+
+#: src/Objects/Currencies.vala:77
+msgid "Argentinian Peso"
+msgstr "Peso Argentino"
+
+#: src/Objects/Currencies.vala:80
+msgid "Czech Koruna"
+msgstr "Koruna ceca"
+
+#: src/Objects/Currencies.vala:83
+msgid "Mexican Peso"
+msgstr "Peso Messicano"
+
+#: src/Objects/Currencies.vala:86
+msgid "Hungarian Forint"
+msgstr "Fiorino Ungherese"
+
+#: src/Objects/Currencies.vala:89
+msgid "Kazakhstani Tenge"
+msgstr "Tenge Kazako"
+
+#: src/MainWindow.vala:80
+msgid "Updated every 10 minutes"
+msgstr "Aggiornato ogni 10 minuti"

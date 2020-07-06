@@ -1,0 +1,107 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# ALBANO BATTISTELLA <ALBANO_BATTISTELLA@HOTMAIL.COM>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-02 11:45-0700\n"
+"PO-Revision-Date: 2020-03-13 23:24+0100\n"
+"Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language-Team: ITALIAN <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.matfantinel.moneta.desktop.in:3
+#: data/com.github.matfantinel.moneta.appdata.xml.in:7
+msgid "Moneta"
+msgstr "Moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:4
+msgid "Currency Rates"
+msgstr "Tassi di Valuta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:5
+msgid "Follow currency rates easily from your desktop."
+msgstr "Segui i tassi di cambio facilmente dal tuo desktop."
+
+#: data/com.github.matfantinel.moneta.desktop.in:8
+msgid "com.github.matfantinel.moneta"
+msgstr "com.github.matfantinel.moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:12
+msgid "Moneta;Money;Finances;Currency;"
+msgstr "Moneta; Denaro; Finanze; Valuta;"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:8
+msgid "Monitor the exchange rates of real-world currencies on your desktop"
+msgstr "Monitora i tassi di cambio delle valute del mondo reale sul tuo desktop"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:10
+msgid ""
+"Keep an eye on the exchange rate of currencies of your choice with this "
+"handy applet that stays on your desktop. Moneta is a fork from the app Coin "
+"by Lains, already on AppCenter, but adapted to handle real-world currencies "
+"instead of virtual ones."
+msgstr ""
+"Tieni d'occhio il tasso di cambio delle valute che preferisci con questo"
+"pratico applet che rimane sul desktop. Moneta è un fork dell'app Coin"
+"di Lains, già su AppCenter, ma adattato per gestire le valute del mondo reale"
+"invece di quelli virtuali."
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:11
+msgid "Features:"
+msgstr "Caratteristiche:"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:13
+msgid ""
+"Stays on top of your desktop, giving you a quick glimpse of the exchange "
+"rates during the day"
+msgstr ""
+"Rimane sul desktop, dandoti una rapida occhiata allo scambio"
+"dei tassi durante il giorno"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:14
+msgid ""
+"Supports many different currencies and updates the rates many times "
+"throughout the day"
+msgstr ""
+"Supporta molte valute diverse e aggiorna le tariffe molte volte"
+"durante il giorno"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:15
+msgid ""
+"Indicates whether the rate has increased or decreased compared to previous "
+"day"
+msgstr ""
+"Indica se il tasso è aumentato o diminuito rispetto al giorno"
+"precedente"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:22
+msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
+msgstr "💰 Nuova valuta: Czech Koruna (Marcelo Fantinel | @marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:23
+msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr "🇫🇷 Traduzione francese (Nathan Bonnemains | @NathanBnm)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:24
+msgid "🇷🇺 Russian Translation (Andrey Sudarikov)"
+msgstr "🇷🇺 Traduzione in Russo (Andrey Sudarikov)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:25
+msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
+msgstr "🎨 Correggi i colori su temi non predefiniti (Marcelo Fantinel | @marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:31
+msgid "Initial Release 💰️"
+msgstr "
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:67
+msgid "Matheus Fantinel"
+msgstr "Matheus Fantinel"

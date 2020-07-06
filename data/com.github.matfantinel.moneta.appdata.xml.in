@@ -11,11 +11,50 @@
     <p>Features:</p>
     <ul>
       <li>Stays on top of your desktop, giving you a quick glimpse of the exchange rates during the day</li>
-      <li>Supports many different currencies and updates the rates many times throughout the day</li>
+      <li>Supports many different currencies and updates the rates every hour throughout weekdays</li>
       <li>Indicates whether the rate has increased or decreased compared to previous day</li>
     </ul>
   </description>
   <releases>  
+    <release version="2.2.0" date="2020-07-06">
+      <description>          
+        <p>Moneta's icon has a fresh new look!</p>
+        <ul>
+          <li>✨ New icon by Nararyans R.I. (@Fatih20)</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.1.0" date="2020-04-10">
+      <description>          
+        <p>A few translation updates and a fix for the app freezing when changing currencies</p>
+        <ul>
+          <li>✔️ Fix freeze when changing currencies (Rajkumar S | @rajkumaar23)</li>
+          <li>🇧🇷️🇵🇹️ Portuguese translation</li>
+          <li>🇨🇵️🇪🇦️ Updated spanish and french translations</li>
+        </ul>
+      </description>
+    </release>
+    <release version="2.0.0" date="2020-03-13">
+      <description>          
+        <p>Moneta v2 is here! Some changes were made in order to make sure the app stays useful and still updates throughout the day:</p>                
+        <ul>
+          <li>ℹ️ New source of information (API)</li>
+          <li>🕐️ Instead of updating every 10 minutes, updates are now hourly (on weekdays only)</li>
+          <li>👀️ Moneta now displays the last time the information was displayed for more transparency</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.5" date="2020-03-03">
+      <description>                          
+        <ul>
+          <li>⚠️ Important update about the future of Moneta</li>
+          <li>✨️ New currency: Kazakhstani Tenge (Arthur Aslanyan | @asahnoln)</li>
+          <li>🇷🇺️ Updated Russian translations (Arthur Aslanyan | @asahnoln)</li>
+          <li>✨️ New currency: Taiwan Dollar</li>
+          <li>👀️ Moneta now shows the current exchange rate in its window title in the taskbar if your OS supports it</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.4" date="2020-02-15">
       <description>
         <ul>

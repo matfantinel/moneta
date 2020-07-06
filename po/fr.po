@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-20 11:18+0600\n"
+"POT-Creation-Date: 2020-04-10 22:54-0300\n"
 "PO-Revision-Date: 2020-01-31 13:44+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -17,71 +17,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Objects/Currencies.vala:44
+#: src/Objects/Currencies.vala:45
 msgid "US Dollar"
 msgstr "Dollar américain"
 
-#: src/Objects/Currencies.vala:47
+#: src/Objects/Currencies.vala:48
 msgid "Brazilian Real"
 msgstr "Réal brésilien"
 
-#: src/Objects/Currencies.vala:50
+#: src/Objects/Currencies.vala:51
 msgid "Euro"
 msgstr "Euro"
 
-#: src/Objects/Currencies.vala:53
+#: src/Objects/Currencies.vala:54
 msgid "British Pound"
 msgstr "Livre sterling"
 
-#: src/Objects/Currencies.vala:56
+#: src/Objects/Currencies.vala:57
 msgid "Australian Dollar"
 msgstr "Dollar australien"
 
-#: src/Objects/Currencies.vala:59
+#: src/Objects/Currencies.vala:60
 msgid "Canadian Dollar"
 msgstr "Dollar canadien"
 
-#: src/Objects/Currencies.vala:62
+#: src/Objects/Currencies.vala:63
 msgid "Chinese Yuan"
 msgstr "Yuan chinois"
 
-#: src/Objects/Currencies.vala:65
+#: src/Objects/Currencies.vala:66
 msgid "Indian Rupee"
 msgstr "Roupie indienne"
 
-#: src/Objects/Currencies.vala:68
+#: src/Objects/Currencies.vala:69
 msgid "Japanese Yen"
 msgstr "Yen japonais"
 
-#: src/Objects/Currencies.vala:71
+#: src/Objects/Currencies.vala:72
 msgid "Russian Ruble"
 msgstr "Rouble russe"
 
-#: src/Objects/Currencies.vala:74
+#: src/Objects/Currencies.vala:75
 msgid "Swiss Franc"
 msgstr "Franc suisse"
 
-#: src/Objects/Currencies.vala:77
+#: src/Objects/Currencies.vala:78
 msgid "Argentinian Peso"
 msgstr "Peso argentin"
 
-#: src/Objects/Currencies.vala:80
+#: src/Objects/Currencies.vala:81
 msgid "Czech Koruna"
 msgstr "Couronne tchèque"
 
-#: src/Objects/Currencies.vala:83
+#: src/Objects/Currencies.vala:84
 #, fuzzy
 msgid "Mexican Peso"
 msgstr "Peso mexicain"
 
-#: src/Objects/Currencies.vala:86
+#: src/Objects/Currencies.vala:87
 msgid "Hungarian Forint"
 msgstr ""
 
-#: src/Objects/Currencies.vala:89
+#: src/Objects/Currencies.vala:90
 msgid "Kazakhstani Tenge"
 msgstr ""
 
-#: src/MainWindow.vala:80
-msgid "Updated every 10 minutes"
-msgstr "Mis à jour toutes les 10 minutes"
+#: src/Objects/Currencies.vala:93
+#, fuzzy
+msgid "Taiwan Dollar"
+msgstr "Dollar canadien"
+
+#: src/MainWindow.vala:267
+msgid "Fetching info..."
+msgstr ""
+
+#: src/MainWindow.vala:322
+msgid "today"
+msgstr "Aujourd'hui"
+
+#: src/MainWindow.vala:353
+msgid "No info"
+msgstr "Pas d'information"
+
+#: src/MainWindow.vala:354
+msgid "Moneta - No info"
+msgstr "Moneta - Pas d'information"
+
+#: src/MainWindow.vala:356
+msgid "No connection"
+msgstr "Pas de connection"
+
+#: src/MainWindow.vala:357
+msgid "Moneta - No connection"
+msgstr "Moneta - Pas de connection"
+
+#: src/MainWindow.vala:361
+msgid "Last updated "
+msgstr "Mis à jour "
+
+#~ msgid "Updated every 10 minutes"
+#~ msgstr "Mis à jour toutes les 10 minutes"
