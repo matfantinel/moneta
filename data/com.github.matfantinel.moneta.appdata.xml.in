@@ -16,6 +16,14 @@
     </ul>
   </description>
   <releases>  
+    <release version="2.2.0" date="2020-07-06">
+      <description>          
+        <p>Moneta's icon has a fresh new look!</p>
+        <ul>
+          <li>✨ New icon by Nararyans R.I. (@Fatih20)</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2020-04-10">
       <description>          
         <p>A few translation updates and a fix for the app freezing when changing currencies</p>
