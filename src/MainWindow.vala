@@ -37,6 +37,7 @@ namespace Moneta {
         public string last_server_update;
         public string source_iso;
         public string target_iso;
+        public string response;
 
         AppSettings settings;
 
@@ -88,7 +89,6 @@ namespace Moneta {
             aicon.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
 
             get_values();
-            set_labels();
 
             var avg_grid = new Gtk.Grid ();
             avg_grid.margin_top = 0;
@@ -121,17 +121,14 @@ namespace Moneta {
 
             source_currency.changed.connect(() => {
                 get_values();
-                set_labels();
             });
 
             target_currency.changed.connect(() => {
                 get_values();
-                set_labels();
             });
 
             Timeout.add_seconds(600,() => {
                 get_values();
-                set_labels();
                 return true;
             });
 
@@ -241,7 +238,7 @@ namespace Moneta {
             target_currency.set_attributes(target_cell, "text", 0);
         }
 
-        public bool get_values() {
+        public void get_values() {
             settings.source = source_currency.get_active();
             if(settings.source >= 0) {
                 source_iso = ((Currency)settings.source).get_iso_code();
@@ -258,35 +255,50 @@ namespace Moneta {
                 target_currency.set_active(Currency.US_DOLLAR);
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
+            
+            if(source_iso == target_iso){
+                avg = 1;
+                avg_history = 0;
+                set_labels();
+                return;
+            }
 
             var uri = "https://moneta-api.herokuapp.com/forex?from=" + target_iso + "&to=" + source_iso;
+            var loadingText = _("Fetching info...");
+            label_result.set_markup("""<span font="18">%s</span>""".printf(loadingText));
+            label_history.set_markup ("""<span font="10">%.2f</span>""".printf(0));
             
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
-            session.send_message(message);
-
+            session.queue_message(message, (sess,mess) => {
+                response = (string)message.response_body.flatten().data;
+                parse_values();
+                set_labels();
+            });
+        }
+        
+        public void parse_values(){
             try {
                 var parser = new Json.Parser();
 
-                stdout.printf("🌳️ Result: "+ (string)message.response_body.flatten().data + "\n");
+                stdout.printf("🌳️ Result: "+ response + "\n");
 
-                parser.load_from_data((string) message.response_body.flatten().data, -1);
+                parser.load_from_data(response, -1);
                 var root_object = parser.get_root().get_object();
                 if (root_object == null) {
                     avg = -1;
                     avg_history = 0;
-                    return false;
+                    return;
                 }
 
                 var status = root_object.get_int_member("status");
 
                 if (status != 200) {
                     if (avg <= 0) {
-
                         avg = 0;
                         avg_history = 0;
                     }
-                    return false;
+                    return;
                 }
 
                 var response_array = root_object.get_array_member("result");
@@ -297,7 +309,7 @@ namespace Moneta {
 
                 var chg_per = response_object.get_string_member("chg_per");
                 if (chg_per != null && chg_per.length > 0) {                    
-                    avg_history = chg_per.to_double();
+                    avg_history = double.parse(chg_per);
                 }
 
                 var last_update = response_object.get_string_member("last_server_update");
@@ -322,7 +334,6 @@ namespace Moneta {
                 avg = -1;
             }
 
-            return true;
         }
 
         public void set_labels() {
@@ -339,15 +350,15 @@ namespace Moneta {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));
                 this.set_title("%s %.4f / 1 %s".printf(curr_symbol, avg, target_curr_symbol));
             } else if (avg == 0) {
-                label_result.set_markup("""<span font="22">%s</span>""".printf("No info"));
-                this.set_title("Moneta - No info");
+                label_result.set_markup("""<span font="22">%s</span>""".printf(_("No info")));
+                this.set_title(_("Moneta - No info"));
             } else {
-                label_result.set_markup("""<span font="22">%s</span>""".printf("No connection"));
-                this.set_title("Moneta - No connection");
+                label_result.set_markup("""<span font="22">%s</span>""".printf(_("No connection")));
+                this.set_title(_("Moneta - No connection"));
             }
 
             if (last_server_update != null) {
-                label_info.set_label("Last updated " + last_server_update);
+                label_info.set_label(_("Last updated ") + last_server_update);
             }
 
             label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
