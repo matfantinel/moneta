@@ -1,0 +1,112 @@
+# Portuguese translations for com.github.matfantinel.moneta package.
+# Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.matfantinel.moneta package.
+# André Barata <andretiagob@protonmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-02 11:45-0700\n"
+"PO-Revision-Date: 2020-08-31 15:56+0100\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pt\n"
+
+#: data/com.github.matfantinel.moneta.desktop.in:3
+#: data/com.github.matfantinel.moneta.appdata.xml.in:7
+msgid "Moneta"
+msgstr "Moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:4
+msgid "Currency Rates"
+msgstr "Taxas de Câmbio"
+
+#: data/com.github.matfantinel.moneta.desktop.in:5
+msgid "Follow currency rates easily from your desktop."
+msgstr ""
+"Siga facilmente as taxas de câmbio a partir do seu ambiente de trabalho."
+
+#: data/com.github.matfantinel.moneta.desktop.in:8
+msgid "com.github.matfantinel.moneta"
+msgstr "com.github.matfantinel.moneta"
+
+#: data/com.github.matfantinel.moneta.desktop.in:12
+msgid "Moneta;Money;Finances;Currency;"
+msgstr "Moneta;Money;Dinheiro;Finances;Finança;Currency;Câmbio;"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:8
+msgid "Monitor the exchange rates of real-world currencies on your desktop"
+msgstr ""
+"Monitorize as taxas de câmbio mundiais de moedas reais no seu ambiente de "
+"trabalho"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:10
+msgid ""
+"Keep an eye on the exchange rate of currencies of your choice with this "
+"handy applet that stays on your desktop. Moneta is a fork from the app Coin "
+"by Lains, already on AppCenter, but adapted to handle real-world currencies "
+"instead of virtual ones."
+msgstr ""
+"Mantenha um olho nas taxas de câmbio das suas moedas correntes favoritas "
+"com esta aplicação que se mantém no seu ambiente de trabalho. O Moneta é "
+"uma bifurcação da aplicação Coin criada pelo Lains, existente no Centro de "
+"Aplicações, mas foi adaptada para lidar com moedas mundiais reais em vez de "
+"virtuais."
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:11
+msgid "Features:"
+msgstr "Funcionalidades:"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:13
+msgid ""
+"Stays on top of your desktop, giving you a quick glimpse of the exchange "
+"rates during the day"
+msgstr ""
+"Permanece no topo do seu ambiente de trabalho, dando-lhe uma visão rápida "
+"das taxas de câmbio durante o dia"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:14
+msgid ""
+"Supports many different currencies and updates the rates many times "
+"throughout the day"
+msgstr ""
+"Suporta várias moedas correntes diferentes e atualiza as taxas várias vezes "
+"no decorrer do dia"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:15
+msgid ""
+"Indicates whether the rate has increased or decreased compared to previous "
+"day"
+msgstr ""
+"Indica se uma taxa aumentou ou diminuiu quando comparada com o dia anterior"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:22
+msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
+msgstr "💰 Nova moeda corrente: Coroa Checa (Marcelo Fantinel | @marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:23
+msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr "🇫🇷  Tradução Francesa (Nathan Bonnemains | @NathanBnm)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:24
+msgid "🇷🇺 Russian Translation (Andrey Sudarikov)"
+msgstr "🇷🇺 Tradução Russa (Andrey Sudarikov)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:25
+msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
+msgstr ""
+"🎨 Correção de cores em temas não padrão (Marcelo Fantinel | @marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:31
+msgid "Initial Release 💰️"
+msgstr "Lançamento Inicial 💰️"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:67
+msgid "Matheus Fantinel"
+msgstr "Matheus Fantinel"
