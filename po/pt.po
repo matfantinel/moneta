@@ -8,18 +8,19 @@ msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 22:54-0300\n"
-"PO-Revision-Date: 2020-04-10 22:54-0300\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-08-31 15:58+0100\n"
+"Last-Translator: André Barata <andretiagob@protonmail.com>\n"
 "Language-Team: none\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: src/Objects/Currencies.vala:45
 msgid "US Dollar"
-msgstr "Dólar"
+msgstr "Dólar Americano"
 
 #: src/Objects/Currencies.vala:48
 msgid "Brazilian Real"
@@ -27,11 +28,11 @@ msgstr "Real"
 
 #: src/Objects/Currencies.vala:51
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: src/Objects/Currencies.vala:54
 msgid "British Pound"
-msgstr "Libra Esterlina"
+msgstr "Libra Inglesa"
 
 #: src/Objects/Currencies.vala:57
 msgid "Australian Dollar"
@@ -39,11 +40,11 @@ msgstr "Dólar Australiano"
 
 #: src/Objects/Currencies.vala:60
 msgid "Canadian Dollar"
-msgstr "Dólar Canadense"
+msgstr "Dólar Canadiano"
 
 #: src/Objects/Currencies.vala:63
 msgid "Chinese Yuan"
-msgstr "Yuan"
+msgstr "Yuan Chinês"
 
 #: src/Objects/Currencies.vala:66
 msgid "Indian Rupee"
@@ -51,7 +52,7 @@ msgstr "Rúpia Indiana"
 
 #: src/Objects/Currencies.vala:69
 msgid "Japanese Yen"
-msgstr "Yen"
+msgstr "Yen Japonês"
 
 #: src/Objects/Currencies.vala:72
 msgid "Russian Ruble"
@@ -67,7 +68,7 @@ msgstr "Peso Argentino"
 
 #: src/Objects/Currencies.vala:81
 msgid "Czech Koruna"
-msgstr "Coroa Tcheca"
+msgstr "Coroa Checa"
 
 #: src/Objects/Currencies.vala:84
 msgid "Mexican Peso"
@@ -87,7 +88,7 @@ msgstr "Dólar Taiwanes"
 
 #: src/MainWindow.vala:267
 msgid "Fetching info..."
-msgstr "Atualizando..."
+msgstr "A obter informação..."
 
 #: src/MainWindow.vala:322
 msgid "today"
@@ -111,4 +112,4 @@ msgstr "Moneta - Desconectado"
 
 #: src/MainWindow.vala:361
 msgid "Last updated "
-msgstr "Atualizado "
+msgstr "Última atualização "
