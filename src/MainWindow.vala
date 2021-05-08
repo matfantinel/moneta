@@ -31,6 +31,8 @@ namespace Moneta {
         public Gtk.ComboBox target_currency;
         public Gtk.Stack stack;
         public Gtk.Image aicon;
+        public Gtk.Entry money_entry;
+        public Gtk.Entry entry_result;
 
         public double avg;
         public double avg_history;
@@ -45,7 +47,7 @@ namespace Moneta {
             GLib.Object(application: application,
                          icon_name: "com.github.matfantinel.moneta",
                          resizable: false,
-                         height_request: 280,
+                         height_request: 300,
                          width_request: 500,
                          border_width: 6
             );
@@ -85,6 +87,7 @@ namespace Moneta {
             label_result.set_halign(Gtk.Align.START);
             label_history = new Gtk.Label ("");
 
+
             aicon = new Gtk.Image ();
             aicon.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
 
@@ -107,8 +110,21 @@ namespace Moneta {
             grid.attach(target_currency, 2, 1, 2, 1);
             grid.attach(label_result, 1, 2, 3, 2);
             grid.attach (avg_grid, 0, 4, 1, 1);
-            grid.attach(label_info, 1, 4, 3, 2);
-
+            grid.attach(label_info, 1, 4, 2, 2);
+            
+            // Initializing the Gtk.Entry
+            money_entry = new Gtk.Entry ();
+            grid.attach(money_entry, 0, 6, 2, 1);
+            
+            entry_result = new Gtk.Entry ();
+            entry_result.set_editable(false);
+            grid.attach(entry_result, 2, 6, 2, 1);
+            
+            // Key release event
+            money_entry.key_release_event.connect((key) => {
+                calculate_result();
+            });
+            
             stack = new Gtk.Stack();
             stack.transition_type = Gtk.StackTransitionType.CROSSFADE;
             stack.margin = 6;
@@ -141,15 +157,30 @@ namespace Moneta {
 
             if(x != -1 && y != -1) {
                 move(x, y);
-            }            
+            }
 
-            button_press_event.connect((e) => {
+            button_press_event.connect ((e) => {
                 if(e.button == Gdk.BUTTON_PRIMARY) {
                     begin_move_drag((int) e.button,(int) e.x_root,(int) e.y_root, e.time);
                     return true;
                 }
                 return false;
             });
+        }
+        
+        public void calculate_result () {
+            string entry_str = money_entry.get_text ();
+            
+            try {
+                double ans = double.parse(entry_str);
+                entry_result.set_text ("%.4f".printf(ans/avg));
+            } catch (Error e) {
+                entry_result.set_text ("");
+            }
+            
+            if (entry_str == "") {
+                entry_result.set_text ("");
+            }
         }
 
         public override bool delete_event (Gdk.EventAny event) {
@@ -364,6 +395,8 @@ namespace Moneta {
             label_history.set_markup ("""<span font="10">%.2f %</span>""".printf(avg_history));
 
             set_history_styles();
+            
+            calculate_result (); // Calculate when label changes
         }
 
         public void set_history_styles() {
