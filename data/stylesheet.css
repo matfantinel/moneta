@@ -1,33 +1,32 @@
-@define-color colorPrimary #EAF5D8;
-@define-color colorAccent #206B00;
-@define-color borderPrimary #206B00;
-@define-color textColorPrimary #206B00;
+@define-color accent_color @LIME_900;
+@define-color background_color #EAF5D8;
+@define-color text_color @LIME_900;
 
 .titlebar,
 .background {
-    background-color: @colorPrimary;
+    background-color: @background_color;
     border: none;
-    color: @textColorPrimary;
+    color: @text_color;
 }
 
 .moneta-toolbar {
-    background: @colorPrimary;
-    color: @textColorPrimary;
+    background: @background_color;
+    color: @text_color;
 }
 
 combobox > box > button {
-    background: @colorPrimary;
-    color: @textColorPrimary;
+    background: @background_color;
+    color: @text_color;
 }
 
 cellview {
-    color: @textColorPrimary;
+    color: @text_color;
 }
 
 .negative-icon {
-    color: #c6262e;
+    color: @STRAWBERRY_500;
 }
 
 .positive-icon {
-    color: #68b723;
+    color: @LIME_500;
 }

@@ -60,7 +60,7 @@ If you want to go ahead and compile Moneta yourself, you'll need the following d
 * libsoup2.4-dev
 * libjson-glib-dev
 
-You can install them on elementary OS Juno with:
+You can install them on elementary OS Odin with:
 
 ```shell
 sudo apt install elementary-sdk
@@ -93,20 +93,18 @@ Moneta is also available as a Flatpak. To build/install it locally, first you ha
 
 ```shell
 sudo apt install flatpak-builder
-flatpak install flathub org.freedesktop.Sdk/x86_64/19.08
-flatpak install flathub org.freedesktop.Platform/x86_64/19.08
-flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
+flatpak install io.elementary.Sdk/x86_64/6
 ```
 
 Then, from the project root:
 
 ```shell
-flatpak-builder --install repo com.github.matfantinel.moneta.json --force-clean --user
+flatpak-builder --install repo com.github.matfantinel.moneta.json --force-clean --user --install
 ```
 
 The app should be displayed on your apps list, or you can run it with:
 ```shell
-com.github.matfantinel.moneta
+flatpak run com.github.matfantinel.moneta
 ```
 
 [elementary OS]: https://elementary.io

@@ -165,7 +165,6 @@ namespace Moneta {
 
         public void setup_window_styles() {
             var provider = new Gtk.CssProvider();
-            provider.load_from_resource("/com/github/matfantinel/moneta/stylesheet.css");
             Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             stick();
 
@@ -182,7 +181,31 @@ namespace Moneta {
             this.set_titlebar(titlebar);
             this.set_title("Moneta");
 
-            this.get_style_context().add_class("rounded");            
+            this.get_style_context().add_class("rounded");
+            
+            // First we get the default instances for Granite.Settings and Gtk.Settings
+            var granite_settings = Granite.Settings.get_default ();
+            var gtk_settings = Gtk.Settings.get_default ();
+
+            // Then, we check if the user's preference is for the dark style and set it if it is
+            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+            // Finally, we listen to changes in Granite.Settings and update our app if the user changes their preference
+            granite_settings.notify["prefers-color-scheme"].connect (() => {
+                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+                load_stylesheet(gtk_settings, provider);
+            });
+
+            load_stylesheet(gtk_settings, provider);
+        }
+
+        private void load_stylesheet(Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
+          if (gtk_settings.gtk_application_prefer_dark_theme) {
+            provider.load_from_resource("/com/github/matfantinel/moneta/stylesheet-dark.css");
+          } else {
+            provider.load_from_resource("/com/github/matfantinel/moneta/stylesheet.css");
+          }
         }
 
         public void setup_comboboxes() {

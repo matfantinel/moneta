@@ -1,0 +1,5 @@
+@import './stylesheet.css';
+
+@define-color accent_color #EAF5D8;
+@define-color background_color #474A41;
+@define-color text_color #EAF5D8;
