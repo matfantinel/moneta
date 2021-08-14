@@ -1,13 +1,13 @@
 # French translations for extra package.
-# Copyright (C) 2020 THE extra'S COPYRIGHT HOLDER
+# Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Nathan Bonnemains (@NathanBnm), 2020.
+# Nathan Bonnemains (@NathanBnm), 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-02 11:45-0700\n"
+"POT-Creation-Date: 2021-08-14 17:16+0000\n"
 "PO-Revision-Date: 2020-01-31 13:44+0100\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
@@ -71,11 +71,11 @@ msgstr ""
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:14
 msgid ""
-"Supports many different currencies and updates the rates many times "
-"throughout the day"
+"Supports many different currencies and updates the rates every hour "
+"throughout weekdays"
 msgstr ""
 "Prend en charge différentes devises et met à jour les taux régulièrement au "
-"cours de la journée"
+"cours des jours de la semaine"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:15
 msgid ""
@@ -83,26 +83,139 @@ msgid ""
 "day"
 msgstr "Indique si le taux a augmenté ou diminué par rapport au jour précédent"
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:22
-msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
-msgstr ""
+#: data/com.github.matfantinel.moneta.appdata.xml.in:21
+msgid "elementary OS 6.0 Odin Support"
+msgstr "Prise en charge d'elementary OS 6.0 Odin"
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:23
-msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr ""
+msgid "🌓 Support for dark style"
+msgstr "Prise en charge du thème sombre 🌓"
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:24
-msgid "🇷🇺 Russian Translation (Andrey Sudarikov)"
+#: data/com.github.matfantinel.moneta.appdata.xml.in:29
+msgid "Moneta's icon has a fresh new look! Plus new translations."
 msgstr ""
-
-#: data/com.github.matfantinel.moneta.appdata.xml.in:25
-msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
-msgstr ""
+"Moneta à une toute nouvelle icône ! Ainsi que de nouvelles traductions."
 
 #: data/com.github.matfantinel.moneta.appdata.xml.in:31
+msgid "✨ New icon by Nararyans R.I. (@Fatih20)"
+msgstr "✨ Nouvelle icône par Nararyans R.I. (@Fatih20)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:32
+msgid "🇮🇹 Italian translation (@albanobattistella)"
+msgstr "🇮🇹 Traductions en italien (@albanobattistella)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:33
+msgid "🇹🇷 Turkish translation (@safak45x)"
+msgstr "🇹🇷 Traductions en turc (@safak45x)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:39
+msgid ""
+"A few translation updates and a fix for the app freezing when changing "
+"currencies"
+msgstr ""
+"Quelques traductions mises à jour et correction d'un blocage lors du "
+"changement de devise"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:41
+msgid "✔️ Fix freeze when changing currencies (Rajkumar S | @rajkumaar23)"
+msgstr ""
+"✔️ Correction d'un blocage lors du changement de devise (Rajkumar S | "
+"@rajkumaar23)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:42
+msgid "🇧🇷️🇵🇹️ Portuguese translation"
+msgstr "🇧🇷️🇵🇹️ Traduction en portugais"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:43
+msgid "🇨🇵️🇪🇦️ Updated spanish and french translations"
+msgstr "🇨🇵️🇪🇦️ Mise à jour des traductions en espagnol et en français"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:49
+msgid ""
+"Moneta v2 is here! Some changes were made in order to make sure the app "
+"stays useful and still updates throughout the day:"
+msgstr ""
+"Moneta v2 est là ! Certaines modifications ont été effectuées pour s'assurer "
+"des mises à jour constantes au cours de la journée :"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:51
+msgid "ℹ️ New source of information (API)"
+msgstr "ℹ️ Nouvelle source d'information (API)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:52
+msgid ""
+"🕐️ Instead of updating every 10 minutes, updates are now hourly (on weekdays "
+"only)"
+msgstr ""
+"🕐️ Plutôt que d'effectuer des mises à jour toutes les 10 minutes, c'est "
+"désormais toutes les heures (jours de semaine uniquement)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:53
+msgid ""
+"👀️ Moneta now displays the last time the information was updated for more "
+"transparency"
+msgstr ""
+"👀️ Moneta affiche désormais la dernière fois que les informations ont été "
+"mises à jour pour plus de transparence"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:60
+msgid "⚠️ Important update about the future of Moneta"
+msgstr "⚠️ Mise à jour importante pour l'avenir de Moneta"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:61
+msgid "✨️ New currency: Kazakhstani Tenge (Arthur Aslanyan | @asahnoln)"
+msgstr "✨️ Nouvelle devise: Tenge kazakh (Arthur Aslanyan | @asahnoln)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:62
+msgid "🇷🇺️ Updated Russian translations (Arthur Aslanyan | @asahnoln)"
+msgstr "🇷🇺 Mise à jour des traductions en russe (Arthur Aslanyan | @asahnoln)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:63
+msgid "✨️ New currency: Taiwan Dollar"
+msgstr "✨️ Nouvelle devise : Dollar taïwanais"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:64
+msgid ""
+"👀️ Moneta now shows the current exchange rate in its window title in the "
+"taskbar if your OS supports it"
+msgstr ""
+"👀️ Moneta affiche désormais le taux de change courant dans le nom de "
+"l'application dans la barre des tâches si votre système le supporte"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:71
+msgid "💰 New currencies: Mexican Peso and Hungarian Forint"
+msgstr "💰 Nouvelles devises : Peso mexicain et Forint hongrois"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:72
+msgid "🇪🇦️ Spanish Translation (@manudmz)"
+msgstr "🇪🇦️ Traduction en espagnol (@manudmz)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:73
+msgid "🇭🇺️ Hungarian Translation (@ovari)"
+msgstr "🇭🇺 Traduction en hongrois (@ovari)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:80
+msgid "💰 New currency: Czech Koruna (Marcelo Fantinel | @marfantinel)"
+msgstr "💰 Nouvelle devise : Couronne tchèque (Marcelo Fantinel | @marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:81
+msgid "🇫🇷 French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr "🇫🇷 Traduction en français (Nathan Bonnemains | @NathanBnm)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:82
+msgid "🇷🇺 Russian Translation (Andrey Sudarikov)"
+msgstr "🇷🇺 Traduction en russe (Andrey Sudarikov)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:83
+msgid "🎨 Fix colors on non-default themes (Marcelo Fantinel | @marfantinel)"
+msgstr ""
+"🎨 Correction des couleurs pour certains thèmes  (Marcelo Fantinel | "
+"@marfantinel)"
+
+#: data/com.github.matfantinel.moneta.appdata.xml.in:89
 msgid "Initial Release 💰️"
 msgstr "Version initiale 💰️"
 
-#: data/com.github.matfantinel.moneta.appdata.xml.in:67
+#: data/com.github.matfantinel.moneta.appdata.xml.in:125
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"

@@ -1,14 +1,14 @@
 # French translations for com.github.matfantinel.moneta package.
-# Copyright (C) 2020 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
+# Copyright (C) 2021 THE com.github.matfantinel.moneta'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.matfantinel.moneta package.
-# Nathan Bonnemains (@NathanBnm), 2020.
+# Nathan Bonnemains (@NathanBnm), 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.moneta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-10 22:54-0300\n"
-"PO-Revision-Date: 2020-01-31 13:44+0100\n"
+"POT-Creation-Date: 2021-08-14 17:16+0000\n"
+"PO-Revision-Date: 2021-08-14 16:46+0000\n"
 "Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -70,50 +70,45 @@ msgid "Czech Koruna"
 msgstr "Couronne tchèque"
 
 #: src/Objects/Currencies.vala:84
-#, fuzzy
 msgid "Mexican Peso"
 msgstr "Peso mexicain"
 
 #: src/Objects/Currencies.vala:87
 msgid "Hungarian Forint"
-msgstr ""
+msgstr "Forint hongrois"
 
 #: src/Objects/Currencies.vala:90
 msgid "Kazakhstani Tenge"
-msgstr ""
+msgstr "Tenge kazakh"
 
 #: src/Objects/Currencies.vala:93
-#, fuzzy
 msgid "Taiwan Dollar"
-msgstr "Dollar canadien"
+msgstr "Dollar taïwanais"
 
-#: src/MainWindow.vala:267
+#: src/MainWindow.vala:290
 msgid "Fetching info..."
-msgstr ""
+msgstr "Récupération des infos…"
 
-#: src/MainWindow.vala:322
+#: src/MainWindow.vala:345
 msgid "today"
-msgstr "Aujourd'hui"
+msgstr "aujourd'hui"
 
-#: src/MainWindow.vala:353
+#: src/MainWindow.vala:376
 msgid "No info"
-msgstr "Pas d'information"
+msgstr "Pas d'informations"
 
-#: src/MainWindow.vala:354
+#: src/MainWindow.vala:377
 msgid "Moneta - No info"
-msgstr "Moneta - Pas d'information"
+msgstr "Moneta - Pas d'informations"
 
-#: src/MainWindow.vala:356
+#: src/MainWindow.vala:379
 msgid "No connection"
-msgstr "Pas de connection"
+msgstr "Pas de connexion"
 
-#: src/MainWindow.vala:357
+#: src/MainWindow.vala:380
 msgid "Moneta - No connection"
-msgstr "Moneta - Pas de connection"
+msgstr "Moneta - Pas de connexion"
 
-#: src/MainWindow.vala:361
+#: src/MainWindow.vala:384
 msgid "Last updated "
 msgstr "Mis à jour "
-
-#~ msgid "Updated every 10 minutes"
-#~ msgstr "Mis à jour toutes les 10 minutes"
