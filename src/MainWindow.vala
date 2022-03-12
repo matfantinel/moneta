@@ -49,9 +49,9 @@ namespace Moneta {
                          width_request: 500,
                          border_width: 6
             );
-        }        
+        }
 
-        construct {            
+        construct {
             setup_window_styles();
 
             settings = AppSettings.get_default();
@@ -141,7 +141,7 @@ namespace Moneta {
 
             if(x != -1 && y != -1) {
                 move(x, y);
-            }            
+            }
 
             button_press_event.connect((e) => {
                 if(e.button == Gdk.BUTTON_PRIMARY) {
@@ -182,7 +182,7 @@ namespace Moneta {
             this.set_title("Moneta");
 
             this.get_style_context().add_class("rounded");
-            
+
             // First we get the default instances for Granite.Settings and Gtk.Settings
             var granite_settings = Granite.Settings.get_default ();
             var gtk_settings = Gtk.Settings.get_default ();
@@ -235,7 +235,7 @@ namespace Moneta {
                 source_list_store.append (out iter);
                 source_list_store.set (iter, 0, currencies[i]);
             }
-    
+
             source_currency = new Gtk.ComboBox.with_model(source_list_store);
             source_currency.margin = 6;
 
@@ -251,7 +251,7 @@ namespace Moneta {
                 target_list_store.append (out iter);
                 target_list_store.set (iter, 0, currencies[i]);
             }
-    
+
             target_currency = new Gtk.ComboBox.with_model(target_list_store);
             target_currency.margin = 6;
 
@@ -270,7 +270,6 @@ namespace Moneta {
                 source_iso = Currency.US_DOLLAR.get_iso_code();
             }
 
-
             settings.target = target_currency.get_active();
             if(settings.target >= 0) {
                 target_iso = ((Currency)settings.target).get_iso_code();
@@ -278,7 +277,7 @@ namespace Moneta {
                 target_currency.set_active(Currency.US_DOLLAR);
                 target_iso = Currency.US_DOLLAR.get_iso_code();
             }
-            
+
             if(source_iso == target_iso){
                 avg = 1;
                 avg_history = 0;
@@ -290,7 +289,7 @@ namespace Moneta {
             var loadingText = _("Fetching info...");
             label_result.set_markup("""<span font="18">%s</span>""".printf(loadingText));
             label_history.set_markup ("""<span font="10">%.2f</span>""".printf(0));
-            
+
             var session = new Soup.Session();
             var message = new Soup.Message("GET", uri);
             session.queue_message(message, (sess,mess) => {
@@ -299,7 +298,7 @@ namespace Moneta {
                 set_labels();
             });
         }
-        
+
         public void parse_values(){
             try {
                 var parser = new Json.Parser();
@@ -326,12 +325,12 @@ namespace Moneta {
 
                 var response_array = root_object.get_array_member("result");
                 var response_object = response_array.get_object_element(0);
-                
+
                 var price = response_object.get_double_member("price");
                 avg = price;
 
                 var chg_per = response_object.get_string_member("chg_per");
-                if (chg_per != null && chg_per.length > 0) {                    
+                if (chg_per != null && chg_per.length > 0) {
                     avg_history = double.parse(chg_per);
                 }
 
@@ -349,7 +348,7 @@ namespace Moneta {
 
                     var time_text_split = dateTime.format("%X").split(":");
 
-                    last_server_update += " " + time_text_split[0].concat(":", time_text_split[1]);                    
+                    last_server_update += " " + time_text_split[0].concat(":", time_text_split[1]);
                 }
             } catch(Error e) {
                 warning("Failed to connect to service: %s", e.message);
@@ -367,7 +366,7 @@ namespace Moneta {
 
             var target_curr_symbol = "";
             settings.target = target_currency.get_active();
-            target_curr_symbol = ((Currency)settings.target).get_symbol();            
+            target_curr_symbol = ((Currency)settings.target).get_symbol();
 
             if (avg > 0) {
                 label_result.set_markup("""<span font="22">%s</span> <span font="30">%.4f</span> <span font="18">/ 1 %s</span>""".printf(curr_symbol, avg, target_curr_symbol));

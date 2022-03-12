@@ -149,7 +149,7 @@ namespace Moneta {
 
                 case TAIWAN_DOLLAR:
                     return "TWD";
-    
+
                 default:
                     assert_not_reached();
             }
@@ -207,7 +207,7 @@ namespace Moneta {
 
                 case TAIWAN_DOLLAR:
                     return "NT$";
-    
+
                 default:
                     assert_not_reached();
             }
