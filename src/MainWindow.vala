@@ -316,10 +316,8 @@ namespace Moneta {
                 var status = root_object.get_int_member("status");
 
                 if (status != 200) {
-                    if (avg <= 0) {
-                        avg = 0;
-                        avg_history = 0;
-                    }
+                    avg = 0;
+                    avg_history = 0;
                     return;
                 }
 
